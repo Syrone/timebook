@@ -1,0 +1,55 @@
+.header {
+	background-color: var(--background);
+	padding-block: 1.25rem;
+
+	&__inner,
+	&__start,
+	&__end {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	&__inner {
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	&__end {
+		gap: 3rem;
+	}
+
+	&__phone,
+	&__callback {
+		white-space: nowrap;
+	}
+
+	&__phone {
+		--_icon-size: 3rem;
+
+		font-family: var(--font-title);
+		font-size: var(--fs-xl);
+		font-weight: 700;
+		line-height: var(--lh-1);
+		gap: .875rem;
+
+		&-content {
+			display: flex;
+			flex-direction: column;
+			gap: .25rem;
+
+			&--tiny {
+				font-family: var(--font-family);
+				font-size: var(--fs-xxs);
+				font-weight: 400;
+			}
+		}
+	}
+
+	&__callback {
+		height: 3.125rem;
+		font-size: var(--fs);
+		border-radius: var(--radius-sm);
+		padding: .5rem 2rem;
+	}
+}

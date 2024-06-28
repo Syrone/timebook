@@ -1,0 +1,44 @@
+.footer {
+	padding-block: 2rem;
+
+	&__inner {
+		display: grid;
+		grid-template-columns: 20rem auto auto auto;
+		gap: 4rem;
+	}
+
+	&__top {
+		padding-bottom: 2rem;
+	}
+
+	&__bottom {
+		border-top: 1px solid #DEDEDE;
+		padding-top: 2rem;
+	}
+
+	&__details {
+		line-height: var(--lh-5);
+	}
+
+	&__phone {
+		font-family: var(--title-font);
+		font-size: var(--h7);
+		font-weight: 700;
+		line-height: var(--lh-1);
+	}
+
+	&__socials {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		gap: .625rem;
+
+		&-link {
+			--_icon-size: 3rem;
+		}
+	}
+
+	&__text {
+		margin: 0;
+	}
+}

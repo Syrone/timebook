@@ -1,0 +1,19 @@
+.logo {
+	width: max-content;
+	display: block;
+	font-family: var(--font-title);
+	font-size: var(--h6);
+	font-weight: 700;
+	line-height: var(--lh-1);
+	color: var(--secondary-color);
+	text-transform: uppercase;
+
+	&__primary {
+		display: block;
+		color: var(--primary-color);
+	}
+}
+
+.logo-description {
+	max-width: 22rem;
+}

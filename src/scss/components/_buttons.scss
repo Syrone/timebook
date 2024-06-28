@@ -1,0 +1,91 @@
+@media (hover: hover) {
+	.btn:hover {
+		color: var(--_color-active);
+		background-color: var(--_background-color-active);
+		border-color: var(--_border-color-active);
+
+		.icon {
+			color: var(--_icon-color-active);
+		}
+	}
+}
+
+.btn {
+	--_color: var(--text-color);
+	--_background-color: transparent;
+
+	--_icon-size: 1rem;
+	--_icon-color: currentColor;
+
+	--_transition-duration: var(--transition-duration);
+	--_transition-type: var(--transition-type);
+
+	--_color-active: var(--primary-color);
+	--_background-color-active: transparent;
+	--_border-color-active: transparent;
+	--_icon-color-active: currentColor;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: .5rem;
+
+	font-size: var(--fs);
+	color: var(--_color);
+	background-color: var(--_background-color);
+	border: 0;
+	padding: 0;
+	transition: color var(--_transition-duration) var(--_transition-type), background var(--_transition-duration) var(--_transition-type), border var(--_transition-duration) var(--_transition-type), transform var(--_transition-duration) var(--_transition-type);
+	cursor: pointer;
+	outline: none;
+
+	.icon {
+		width: var(--_icon-size);
+		height: var(--_icon-size);
+		color: var(--_icon-color);
+		flex-shrink: 0;
+	}
+
+	&:is(:focus-visible, :active, .is-active, .mixitup-control-active) {
+		color: var(--_color-active);
+		background-color: var(--_background-color-active);
+		border-color: var(--_border-color-active);
+
+		.icon {
+			color: var(--_icon-color-active);
+		}
+	}
+}
+
+.btn-inherit {
+	--_color: inherit;
+
+	width: auto;
+	font: inherit;
+}
+
+.btn-primary {
+	--_color: var(--light-color);
+	--_background-color: var(--primary-color);
+
+	--_color-active: var(--light-color);
+	--_background-color-active: var(--secondary-color);
+
+	height: 6.25rem;
+	font-size: var(--fs-lg);
+	font-weight: 700;
+	line-height: var(--lg);
+	border-radius: var(--radius-3xl);
+	padding: 1rem 4rem;
+}
+
+.btn-sm {
+	height: 1.5rem;
+	font-size: .875rem;
+}
+
+.btn-lg {
+	height: 7.5rem;
+	font-size: var(--fs-xl);
+	padding: 1rem 5rem;
+}
