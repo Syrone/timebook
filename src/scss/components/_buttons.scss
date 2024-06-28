@@ -78,6 +78,21 @@
 	padding: 1rem 4rem;
 }
 
+
+.btn-dark {
+	--_color: var(--light-color);
+	--_background-color: var(--background-dark);
+
+	--_color-active: var(--light-color);
+	--_background-color-active: var(--secondary-color);
+
+	min-height: 6.25rem;
+	font-size: var(--fs-lg);
+	font-weight: 700;
+	border-radius: var(--radius-3xl);
+	padding: 1rem 4rem;
+}
+
 .btn-sm {
 	min-height: 1.5rem;
 	font-size: .875rem;

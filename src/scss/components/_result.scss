@@ -1,0 +1,37 @@
+.result {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	font-size: var(--fs-md);
+
+	&__item {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 1.875rem;
+		background-color: var(--background-light);
+		border-radius: var(--radius-lg);
+		padding: 3.125rem;
+
+		&-icon {
+			--_i-size: 1.875rem;
+			--_i-color: inherit;
+		}
+
+		&-title {
+			color: inherit;
+			margin-bottom: 1.25rem;
+		}
+
+		&:nth-child(even) {
+			color: var(--light-color);
+			background: var(--primary-color) radial-gradient(40% 40% at 90.51% 9.25%, rgba(255, 255, 255, .5) 0%, rgb(133, 187, 21) 100%);
+		}
+	}
+
+	&-bottom {
+		display: flex;
+		justify-content: center;
+		margin-top: 3.125rem;
+	}
+}

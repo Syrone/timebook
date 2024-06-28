@@ -34,6 +34,14 @@
 	color: var(--text-color) !important;
 }
 
+.text-background-light {
+	display: inline-block;
+	color: var(--primary-color);
+	background-color: var(--background);
+	border-radius: var(--radius-3xl);
+	padding: 0 1.5rem;
+}
+
 .fw-700 {
 	font-weight: 700 !important;
 }

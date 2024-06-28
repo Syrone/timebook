@@ -26,7 +26,8 @@
 	}
 
 	// buttons
-	.btn-primary {
+	.btn-primary,
+	.btn-dark {
 		min-height: 5rem;
 	}
 
@@ -74,11 +75,6 @@
 	.hero {
 		min-height: 50rem;
 		padding-block: 7.5rem;
-
-		&__efficacy {
-			min-height: max-content;
-			padding: 2.5rem 1rem;
-		}
 
 		&__features {
 			margin-block: 2.5rem 3.125rem;
@@ -129,6 +125,47 @@
 		}
 	}
 
+	// efficacy
+	.btn-efficacy {
+		width: calc(100% - var(--container-offset) * 2);
+		max-width: 30rem;
+		min-height: 3.75rem;
+		margin-inline: var(--container-offset);
+		padding: 1rem 2.5rem;
+		writing-mode: initial;
+		top: auto;
+		right: calc(50% - var(--container-offset));
+		bottom: 0;
+		transform: translateX(50%);
+		border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+	}
+
+	// result
+	.result {
+
+		&__item {
+			padding: 2.5rem;
+		}
+
+		&-bottom {
+			margin-top: 2.5rem;
+		}
+	}
+
+	// implemented
+	.implemented {
+		padding-block: 6.25rem;
+
+		&__list {
+			grid-template-columns: repeat(2, 1fr);
+			font-size: var(--fs-md);
+
+			&-image {
+				height: 5rem;
+			}
+		}
+	}
+
 	// footer
 	.footer {
 
@@ -173,6 +210,38 @@
 			gap: 1.5rem;
 		}
 	}
+
+	// result
+	.result {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+
+		&__item {
+			gap: 1.25rem;
+
+			&-title {
+				margin-bottom: 1rem;
+			}
+
+			&:nth-child(3) {
+				grid-column: 2;
+			}
+
+			&:nth-child(4) {
+				grid-column: 1;
+				grid-row: 2;
+			}
+		}
+	}
+
+	// implemented
+	.implemented {
+
+		&__list {
+			gap: 3rem 1.5rem;
+		}
+	}
+
 	// footer
 	.footer {
 
@@ -224,6 +293,10 @@
 
 		&-header {
 			margin-bottom: .75rem;
+
+			&--offset {
+				margin-bottom: 2.5rem;
+			}
 		}
 
 		&-text {
@@ -232,7 +305,22 @@
 			+ .section-text {
 				margin-top: 1rem;
 			}
+
+			&--offset {
+				margin-bottom: 2.5rem;
+			}
 		}
+	}
+	
+	// buttons
+	.btn-primary,
+	.btn-dark {
+		min-height: 3.75rem;
+	}
+
+	.btn-lg {
+		min-height: 4.375rem;
+		padding: .625rem 2rem;
 	}
 
 	// list
@@ -256,6 +344,10 @@
 
 		&__phone {
 			display: none;
+		}
+		
+		&__callback {
+			min-height: 2.5rem;
 		}
 	}
 
@@ -311,6 +403,45 @@
 
 		&__container {
 			gap: 2.5rem;
+		}
+	}
+
+	// result
+	.result {
+		grid-template-columns: 1fr;
+		gap: 1.25rem;
+
+		&__item {
+			gap: 1rem;
+			padding: 2rem;
+
+			&:nth-child(3),
+			&:nth-child(4) {
+				grid-column: initial;
+				grid-row: initial;
+			}
+
+			&-icon {
+				--_i-size: 1.5rem;
+			}
+
+			&-title {
+				margin-bottom: .75rem;
+			}
+		}
+
+		&-bottom {
+			margin-top: 2rem;
+		}
+	}
+
+	// implemented
+	.implemented {
+		padding-block: 5rem;
+
+		&__list {
+			grid-template-columns: 1fr;
+			gap: 2.5rem 1.25rem;
 		}
 	}
 

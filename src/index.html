@@ -10,9 +10,6 @@
     @include('partials/header.html')
     <main class="main">
       <section class="section hero-section">
-        <button class="btn btn-primary hero__efficacy" data-graph-path="modal-efficacy">
-          Расчитай эффективность внедрения
-        </button>
         <div class="container-lg">
           <div class="hero">
             <div class="section-header section-header--center">
@@ -200,7 +197,203 @@
           </div>
         </div>
       </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header section-header--center">
+            <h2 class="section-title">
+              <span class="primary-color">Первые</span> 
+              заметные 
+              <span class="primary-color">результаты</span> 
+              появятся 
+              <span class="primary-color">уже через 1 месяц</span> 
+              после интеграции продукта
+            </h2>
+          </div>
+          <p class="section-text section-text--offset">
+            Цифра усреднённая. Малой компании достаточно 1 месяца, более крупной с несколькими филиалами чуть больше
+          </p>
+
+          <ul class="list-reset result">
+            <li class="result__item">
+              <span class="icon result__item-icon">
+                <svg>
+                  <use xlink:href="img/icons/star.svg#svg-star"></use>
+                </svg>
+              </span>
+              <div class="result__item-content">
+                <h3 class="h7 result__item-title">
+                  Повышение дисциплины сотрудников
+                </h3>
+                <p class="result__item-text">
+                  Люди становятся более ответственными в соблюдении графика и регламента, так как система фиксирует все опоздания, ранние уходы, излишние перерывы
+                </p>
+              </div>
+            </li>
+            <li class="result__item">
+              <span class="icon result__item-icon">
+                <svg>
+                  <use xlink:href="img/icons/star.svg#svg-star"></use>
+                </svg>
+              </span>
+              <div class="result__item-content">
+                <h3 class="h7 result__item-title">
+                  Сокращение переработок
+                </h3>
+                <p class="result__item-text">
+                  Четкий учет отработанного времени позволяет оптимизировать нагрузку на персонал, перераспределив обязанности
+                </p>
+              </div>
+            </li>
+            <li class="result__item">
+              <span class="icon result__item-icon">
+                <svg>
+                  <use xlink:href="img/icons/star.svg#svg-star"></use>
+                </svg>
+              </span>
+              <div class="result__item-content">
+                <h3 class="h7 result__item-title">
+                  Выявление ресурсов для оптимизации
+                </h3>
+                <p class="result__item-text">
+                  Анализ собранных данных помогает определить пики нагрузки, провальные периоды и принять меры
+                </p>
+              </div>
+            </li>
+            <li class="result__item">
+              <span class="icon result__item-icon">
+                <svg>
+                  <use xlink:href="img/icons/star.svg#svg-star"></use>
+                </svg>
+              </span>
+              <div class="result__item-content">
+                <h3 class="h7 result__item-title">
+                  Экономия на ФОТ
+                </h3>
+                <p class="result__item-text">
+                  За счет исключения ситуаций, когда людям переплачивали за невыходы или случайно допущенные ошибки в учете
+                </p>
+              </div>
+            </li>
+            <li class="result__item">
+              <span class="icon result__item-icon">
+                <svg>
+                  <use xlink:href="img/icons/star.svg#svg-star"></use>
+                </svg>
+              </span>
+              <div class="result__item-content">
+                <h3 class="h7 result__item-title">
+                  Ускорение расчета зарплат
+                </h3>
+                <p class="result__item-text">
+                  Автоматизированный учет существенно экономит время кадровиков и бухгалтеров
+                </p>
+              </div>
+            </li>
+            <li class="result__item">
+              <span class="icon result__item-icon">
+                <svg>
+                  <use xlink:href="img/icons/star.svg#svg-star"></use>
+                </svg>
+              </span>
+              <div class="result__item-content">
+                <h3 class="h7 result__item-title">
+                  Сокращение бумажного документооборота
+                </h3>
+                <p class="result__item-text">
+                  Исчезает необходимость вести многочисленные бумажные отчёты и журналы, вся информация концентрируется в системе
+                </p>
+              </div>
+            </li>
+          </ul>
+          <div class="result-bottom">
+            <button type="button" class="btn btn-lg btn-dark result-bottom__btn">
+              хочу такие реультаты
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container-lg">
+          <div class="implemented">
+            <div class="container">
+              <div class="section-header section-header--center">
+                <h2 class="section-title section-title--inherit">
+                  <span class="text-background-light">Более 100</span> 
+                  крупных и региональных сетей уже внедрили wfm-систему
+                </h2>
+              </div>
+              <p class="section-text section-text--offset">
+                И помогают управлять рабочим временем <span class="fw-700">более 300 тысяч сотрудников</span>
+              </p>
+  
+              <ul class="list-reset implemented__list">
+                <li class="implemented__list-item">
+                  <picture class="implemented__list-picture">
+                    <source srcset="./img/implemented/picture-1.webp" type="image/webp">
+                    <img loading="lazy" src="./img/implemented/picture-1.jpg" class="implemented__list-image" width="360" height="100" alt="Картинка">
+                  </picture>
+                  <div class="implemented__list-content">
+                    <h3 class="h7 implemented__list-title">
+                      на 550 тыс. руб/год
+                    </h3>
+                    <p class="implemented__list-text">
+                      сокращение потерь от переработок
+                    </p>
+                  </div>
+                </li>
+                <li class="implemented__list-item">
+                  <picture class="implemented__list-picture">
+                    <source srcset="./img/implemented/picture-2.webp" type="image/webp">
+                    <img loading="lazy" src="./img/implemented/picture-2.jpg" class="implemented__list-image" width="360" height="100" alt="Картинка">
+                  </picture>
+                  <div class="implemented__list-content">
+                    <h3 class="h7 implemented__list-title">
+                      25%
+                    </h3>
+                    <p class="implemented__list-text">
+                      рабочего времени сотрудников отдела кадров сэкономлено
+                    </p>
+                  </div>
+                </li>
+                <li class="implemented__list-item">
+                  <picture class="implemented__list-picture">
+                    <source srcset="./img/implemented/picture-3.webp" type="image/webp">
+                    <img loading="lazy" src="./img/implemented/picture-3.jpg" class="implemented__list-image" width="360" height="100" alt="Картинка">
+                  </picture>
+                  <div class="implemented__list-content">
+                    <h3 class="h7 implemented__list-title">
+                      на 40%
+                    </h3>
+                    <p class="implemented__list-text">
+                      сокращение ошибок при расчете зарплат
+                    </p>
+                  </div>
+                </li>
+                <li class="implemented__list-item">
+                  <picture class="implemented__list-picture">
+                    <source srcset="./img/implemented/picture-4.webp" type="image/webp">
+                    <img loading="lazy" src="./img/implemented/picture-4.jpg" class="implemented__list-image" width="360" height="100" alt="Картинка">
+                  </picture>
+                  <div class="implemented__list-content">
+                    <h3 class="h7 implemented__list-title">
+                      на 18%
+                    </h3>
+                    <p class="implemented__list-text">
+                      рост производительности труда за счёт оптимизации графиков
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <button class="btn btn-primary btn-efficacy" data-graph-path="modal-efficacy">
+      Расчитай эффективность внедрения
+    </button>
     @include('partials/modals.html')
     @include('partials/footer.html')
   </div>

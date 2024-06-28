@@ -18,11 +18,19 @@
 				text-align: center;
 			}
 		}
+
+		&--offset {
+			margin-bottom: 5rem;
+		}
 	}
 
 	&-title {
 		text-transform: uppercase;
 		margin-bottom: 0;
+
+		&--inherit {
+			color: inherit;
+		}
 	}
 
 	&-text {
@@ -30,6 +38,10 @@
 
 		+ .section-text {
 			margin-top: 2rem;
+		}
+		
+		&--offset {
+			margin-bottom: 5rem;
 		}
 	}
 

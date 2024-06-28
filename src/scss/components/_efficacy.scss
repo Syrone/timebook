@@ -1,0 +1,11 @@
+.btn-efficacy {
+	min-height: max-content;
+	border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+	padding: 3.125rem 1.5rem;
+	writing-mode: vertical-rl;
+	position: fixed;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%) rotate(180deg);
+	z-index: 1;
+}
