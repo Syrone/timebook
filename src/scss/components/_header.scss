@@ -47,7 +47,7 @@
 	}
 
 	&__callback {
-		height: 3.125rem;
+		min-height: 3.125rem;
 		font-size: var(--fs);
 		border-radius: var(--radius-sm);
 		padding: .5rem 2rem;

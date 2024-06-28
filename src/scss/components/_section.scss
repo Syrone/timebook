@@ -1,0 +1,50 @@
+.section {
+	padding-bottom: 9.375rem;
+
+	&-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem 2rem;
+		margin-bottom: 1rem;
+
+		&--center {
+			max-width: 78rem;
+			margin-inline: auto;
+			justify-content: center;
+			text-align: center;
+
+			~ .section-text {
+				text-align: center;
+			}
+		}
+	}
+
+	&-title {
+		text-transform: uppercase;
+		margin-bottom: 0;
+	}
+
+	&-text {
+		font-size: var(--fs-xxl);
+
+		+ .section-text {
+			margin-top: 2rem;
+		}
+	}
+
+	&:last-child {
+		padding-bottom: 6.25rem;
+	}
+}
+
+.background-section {
+	background-image: url(../img/background.webp);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	.section:last-child {
+		padding-bottom: 0;
+	}
+}

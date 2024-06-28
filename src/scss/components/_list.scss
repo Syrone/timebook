@@ -1,0 +1,24 @@
+.list-icon {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+	font-size: var(--fs-lg);
+
+	li {
+		display: flex;
+		gap: 1.875rem;
+	}
+
+	&-svg {
+		--_i-size: 3.125rem;
+	}
+
+	&-title {
+		line-height: var(--lh-3);
+		margin-bottom: .625rem;
+	}
+	
+	&-content {
+		margin-block: auto;
+	}
+}

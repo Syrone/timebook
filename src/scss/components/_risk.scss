@@ -1,0 +1,13 @@
+.risk {
+
+	&__container {
+		display: grid;
+		grid-template-columns: minmax(45rem, 58rem) minmax(22rem, 30rem);
+		gap: 2rem;
+		justify-content: space-between;
+	}
+
+	&__list {
+		gap: 4.375rem;
+	}
+}

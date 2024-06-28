@@ -71,21 +71,21 @@
 	--_color-active: var(--light-color);
 	--_background-color-active: var(--secondary-color);
 
-	height: 6.25rem;
+	min-height: 6.25rem;
 	font-size: var(--fs-lg);
 	font-weight: 700;
-	line-height: var(--lg);
 	border-radius: var(--radius-3xl);
 	padding: 1rem 4rem;
 }
 
 .btn-sm {
-	height: 1.5rem;
+	min-height: 1.5rem;
 	font-size: .875rem;
 }
 
 .btn-lg {
-	height: 7.5rem;
+	min-height: 7.5rem;
 	font-size: var(--fs-xl);
 	padding: 1rem 5rem;
+	text-transform: uppercase;
 }

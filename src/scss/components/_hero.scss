@@ -1,0 +1,75 @@
+.hero {
+	min-height: 58rem;
+	background: var(--background-light) url(../img/hero/hero-bg.svg) no-repeat center / contain;
+	border-radius: var(--radius-3xl);
+	padding: 10rem var(--container-offset);
+
+	&-section {
+		position: relative;
+
+		&,
+		&:first-child,
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+
+	&__efficacy {
+		min-height: max-content;
+		border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+		padding: 3.125rem 1.5rem;
+		writing-mode: vertical-rl;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%) rotate(180deg);
+		z-index: 1;
+	}
+
+	&__features {
+		max-width: 75rem;
+		display: grid;
+		grid-template-columns: repeat(3, minmax(15rem, 19rem));
+		align-items: start;
+		justify-content: space-between;
+		gap: 2rem;
+		margin: 3.75rem auto 5rem;
+	}
+
+	&__feature {
+		display: flex;
+		gap: 1.25rem;
+
+		&-icon {
+			--_i-size: 1.875rem;
+			--_i-color: var(--primary-color);
+		}
+
+		&-content {
+			margin-block: auto;
+		}
+	}
+
+	&__footer {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(20rem, 28.125rem));
+		align-items: center;
+		justify-content: center;
+		gap: 2rem;
+	}
+
+	&__btn {
+		font-size: var(--fs-lg);
+		padding: 1rem 2rem;
+	}
+
+	&__hint {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	
+		&-icon {
+			--_i-size: 3.5rem;
+		}
+	}
+}

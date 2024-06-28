@@ -7,13 +7,13 @@
 @media (max-width: 75rem) {
 	:root {
 		// font-size
-		--h1: 4.375rem;
-		--h2: 4rem;
-		--h3: 3.75rem;
+		--h1: 4rem;
+		--h2: 3.75rem;
+		--h3: 3.5rem;
 		--h4: 2.5rem;
-		--h5: 2.25rem;
-		--h6: 1.875rem;
-		--h7: 1.5rem;
+		--h5: 1.75rem;
+		--h6: 1.5rem;
+		--h7: 1.25rem;
 	
 		--fs: .875rem;
 		--fs-xxs: .625rem;
@@ -23,6 +23,28 @@
 		--fs-lg: 1.125rem;
 		--fs-xl: 1.25rem;
 		--fs-xxl: 1.5rem;
+	}
+
+	// buttons
+	.btn-primary {
+		min-height: 5rem;
+	}
+
+	.btn-lg {
+		min-height: 6.25rem;
+		padding: .625rem 2.5rem;
+	}
+
+	// list
+	.list-icon {
+
+		li {
+			gap: 1.5rem;
+		}
+
+		&-svg {
+			--_i-size: 2.5rem;
+		}
 	}
 
 	// logo
@@ -43,8 +65,67 @@
 		}
 
 		&__callback {
-			height: 2.5rem;
+			min-height: 2.5rem;
 			padding: 0.5rem 1.25rem;
+		}
+	}
+
+	// hero
+	.hero {
+		min-height: 50rem;
+		padding-block: 7.5rem;
+
+		&__efficacy {
+			min-height: max-content;
+			padding: 2.5rem 1rem;
+		}
+
+		&__features {
+			margin-block: 2.5rem 3.125rem;
+		}
+
+		&__feature {
+			gap: 1rem;
+
+			&-icon {
+				--_i-size: 1.5rem
+			}
+		}
+
+		&__footer {
+			gap: 1.5rem;
+		}
+
+		&__hint {
+			gap: .875rem;
+
+			&-icon {
+				--_i-size: 3rem;
+			}
+		}
+	}
+	
+	// percentage
+	.percentage {
+		
+		&__list {
+
+			&-item {
+				padding: 2.5rem;
+			}
+		}
+	}
+
+	// risk 
+	.risk {
+
+		&__container {
+			grid-template-columns: 1fr;
+			gap: 4rem;
+		}
+
+		&__list {
+			gap: 2rem;
 		}
 	}
 
@@ -70,6 +151,28 @@
 /** > 992px **/
 @media (max-width: 62rem) {
 
+	// hero
+	.hero {
+		padding-block: 6.25rem;
+
+		&__features {
+			grid-template-columns: minmax(16rem, 22rem);
+			justify-content: center;
+		}
+
+		&__footer {
+			grid-template-columns: minmax(16rem, 25.875rem);
+		}
+	}
+		
+	// percentage
+	.percentage {
+		
+		&__list {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+	}
 	// footer
 	.footer {
 
@@ -107,13 +210,45 @@
 @media (max-width: 48rem) {
 	:root {
 		// font-size
-		--h1: 4rem;
-		--h2: 3.75rem;
-		--h3: 2.5rem;
-		--h4: 2.25rem;
-		--h5: 1.875rem;
-		--h6: 1.5rem;
-		--h7: 1.25rem;
+		--h1: 2.5rem;
+		--h2: 2rem;
+		--h3: 1.875rem;
+		--h4: 1.5rem;
+		--h5: 1.375rem;
+		--h6: 1.25rem;
+		--h7: 1.125rem;
+	}
+
+	// section
+	.section {
+
+		&-header {
+			margin-bottom: .75rem;
+		}
+
+		&-text {
+			font-size: var(--fs-xl);
+
+			+ .section-text {
+				margin-top: 1rem;
+			}
+		}
+	}
+
+	// list
+	.list-icon {
+
+		li {
+			gap: 1rem;
+		}
+
+		&-svg {
+			--_i-size: 2rem;
+		}
+
+		&-title {
+			margin-bottom: .25rem;
+		}
 	}
 
 	// header
@@ -121,6 +256,61 @@
 
 		&__phone {
 			display: none;
+		}
+	}
+
+	// hero
+	.hero {
+		min-height: 40rem;
+		background: var(--background-light);
+		padding-block: 5rem;
+		
+		&__efficacy {
+			padding: 2rem .75rem;
+		}
+
+		&__features {
+			margin-block: 2rem 2.5rem;
+		}
+		
+		&__feature {
+			gap: .75rem;
+
+			&-icon {
+				--_i-size: 1.25rem;
+			}
+		}
+
+		&__footer {
+			gap: 1.25rem;
+		}
+
+		&__hint {
+			gap: .75rem;
+
+			&-icon {
+				--_i-size: 2.5rem;
+			}
+		}
+	}
+	
+	// percentage
+	.percentage {
+		
+		&__list {
+			gap: 1.25rem;
+
+			&-item {
+				padding: 2rem;
+			}
+		}
+	}
+
+	// risk
+	.risk {
+
+		&__container {
+			gap: 2.5rem;
 		}
 	}
 
