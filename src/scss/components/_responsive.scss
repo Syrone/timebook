@@ -97,6 +97,10 @@
 			border-radius: var(--radius-lg);
 			padding: 3rem 2.5rem;
 
+			&-start {
+				padding-top: 0;
+			}
+
 			&-example {
 				padding: 2rem;
 
@@ -239,6 +243,11 @@
 				height: 5rem;
 			}
 		}
+	}
+
+	// video
+	.video-play {
+		--_icon-size: 5rem;
 	}
 
 	// footer
@@ -475,6 +484,11 @@
 			&-end {
 				grid-template-columns: 1fr;
 				gap: 1.5rem;
+
+				&--video {
+					height: 50vw;
+					min-height: 10rem;
+				}
 			}
 
 			&-example {
@@ -601,7 +615,6 @@
 		}
 	}
 
-
 	// implemented
 	.implemented {
 		padding-block: 5rem;
@@ -610,6 +623,11 @@
 			grid-template-columns: 1fr;
 			gap: 2.5rem 1.25rem;
 		}
+	}
+
+	// video
+	.video-play {
+		--_icon-size: 10vw;
 	}
 
 	// footer

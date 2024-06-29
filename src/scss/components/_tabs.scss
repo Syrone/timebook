@@ -27,6 +27,10 @@
 			display: grid;
 		}
 
+		&-start {
+			padding-top: 1.875rem;
+		}
+
 		&-title {
 			margin-bottom: 2rem;
 		}
@@ -35,6 +39,11 @@
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			gap: 1.875rem;
+
+			&--video {
+				min-height: 26.25rem;
+				grid-template-columns: 1fr;
+			}
 		}
 
 		&-example,
