@@ -24,12 +24,38 @@
 		}
 	}
 
+	&-subtitle {
+		max-width: 62.5rem;
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		margin-inline: auto;
+		margin-bottom: 5rem;
+
+		&-text {
+			font-family: var(--font-title);
+			font-size: var(--h6);
+			font-weight: 700;
+			white-space: nowrap;
+		}
+
+		&-current {
+			font-size: 7.5rem;
+			color: var(--primary-color);
+		}
+	}
+
 	&-title {
 		text-transform: uppercase;
 		margin-bottom: 0;
 
 		&--inherit {
 			color: inherit;
+		}
+
+		&--bigger {
+			display: block;
+			font-size: 7.5rem;
 		}
 	}
 

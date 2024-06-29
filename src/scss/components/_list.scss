@@ -22,3 +22,19 @@
 		margin-block: auto;
 	}
 }
+
+.list-icon-md {
+	gap: 1.25rem;
+
+	.list-icon {
+
+		&-svg {
+			--_i-size: 1.5rem;
+			--_i-color: var(--primary-color);
+		}
+	}
+
+	li {
+		gap: 1.25rem;
+	}
+}

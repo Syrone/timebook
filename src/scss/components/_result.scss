@@ -25,7 +25,7 @@
 
 		&:nth-child(even) {
 			color: var(--light-color);
-			background: var(--primary-color) radial-gradient(40% 40% at 90.51% 9.25%, rgba(255, 255, 255, .5) 0%, rgb(133, 187, 21) 100%);
+			background: var(--primary-color) radial-gradient(40% 40% at 90% 10%, rgba(255, 255, 255, .5) 0%, rgb(133, 187, 21) 100%);
 		}
 	}
 
@@ -33,5 +33,35 @@
 		display: flex;
 		justify-content: center;
 		margin-top: 3.125rem;
+	}
+}
+
+.result-sm {
+	grid-template-columns: repeat(4, 1fr);
+
+	.result__item {
+		min-height: 24.375rem;
+
+		&-title {
+			font-size: var(--fs-xl);
+			margin-bottom: 1rem;
+		}
+
+		&-text {
+			font-size: var(--fs);
+		}
+
+		&:nth-child(even) {
+			color: initial;
+			background: var(--background-light);
+		}
+		
+		&:nth-child(8n + 2),
+		&:nth-child(8n + 4),
+		&:nth-child(8n + 5),
+		&:nth-child(8n + 7) {
+			color: var(--light-color);
+			background: var(--primary-color) radial-gradient(40% 40% at 90% 10%, rgba(255, 255, 255, .5) 0%, rgb(133, 187, 21) 100%);
+		}
 	}
 }

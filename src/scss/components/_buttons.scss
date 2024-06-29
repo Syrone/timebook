@@ -46,7 +46,7 @@
 		flex-shrink: 0;
 	}
 
-	&:is(:focus-visible, :active, .is-active, .mixitup-control-active) {
+	&:is(:focus-visible, :active, .is-active, .tabs__nav-btn--active) {
 		color: var(--_color-active);
 		background-color: var(--_background-color-active);
 		border-color: var(--_border-color-active);
@@ -78,13 +78,26 @@
 	padding: 1rem 4rem;
 }
 
-
 .btn-dark {
 	--_color: var(--light-color);
 	--_background-color: var(--background-dark);
 
 	--_color-active: var(--light-color);
 	--_background-color-active: var(--secondary-color);
+
+	min-height: 6.25rem;
+	font-size: var(--fs-lg);
+	font-weight: 700;
+	border-radius: var(--radius-3xl);
+	padding: 1rem 4rem;
+}
+
+.btn-light {
+	--_color: var(--text-color);
+	--_background-color: var(--background-light);
+
+	--_color-active: var(--light-color);
+	--_background-color-active: var(--primary-color);
 
 	min-height: 6.25rem;
 	font-size: var(--fs-lg);
