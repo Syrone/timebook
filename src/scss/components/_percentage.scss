@@ -2,24 +2,23 @@
 	padding-top: 2rem;
 
 	&__list {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 2rem;
+
+		.swiper-slide {
+			&:nth-child(3n-2) .percentage__list-item {
+				color: var(--light-color);
+				background-color: var(--background-dark);
+			}
+
+			&:nth-child(3n) .percentage__list-item {
+				color: var(--light-color);
+				background-color: var(--primary-color);
+			}
+		}
 
 		&-item {
 			background-color: var(--background);
 			border-radius: var(--radius-lg);
 			padding: 3.75rem;
-
-			&:nth-child(3n-2) {
-				color: var(--light-color);
-				background-color: var(--background-dark);
-			}
-
-			&:nth-child(3n)  {
-				color: var(--light-color);
-				background-color: var(--primary-color);
-			}
 		}
 
 		&-title {

@@ -1,8 +1,14 @@
 .result {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 2rem;
 	font-size: var(--fs-md);
+
+	.swiper-slide {
+		&:nth-child(even) {
+			.result__item {
+				color: var(--light-color);
+				background: var(--primary-color) radial-gradient(40% 40% at 90% 10%, rgba(255, 255, 255, .5) 0%, rgb(133, 187, 21) 100%);
+			}
+		}
+	}
 
 	&__item {
 		height: 100%;
@@ -22,11 +28,6 @@
 			color: inherit;
 			margin-bottom: 1.25rem;
 		}
-
-		&:nth-child(even) {
-			color: var(--light-color);
-			background: var(--primary-color) radial-gradient(40% 40% at 90% 10%, rgba(255, 255, 255, .5) 0%, rgb(133, 187, 21) 100%);
-		}
 	}
 
 	&-bottom {
@@ -40,7 +41,7 @@
 	grid-template-columns: repeat(4, 1fr);
 
 	.result__item {
-		min-height: 24.375rem;
+		min-height: 25rem;
 
 		&-title {
 			font-size: var(--fs-xl);

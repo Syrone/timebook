@@ -16,16 +16,13 @@
 		}
 	}
 
-	&__panel {
+	&__inner {
+		display: grid;
 		grid-template-columns: minmax(22rem, 28.75rem) minmax(36rem, 1fr);
 		gap: 2.5rem;
 		background-color: var(--background-light);
 		border-radius: var(--radius-3xl);
 		padding: 4.375rem 6.25rem;
-
-		&--active {
-			display: grid;
-		}
 
 		&-start {
 			padding-top: 1.875rem;

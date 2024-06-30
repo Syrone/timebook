@@ -1,10 +1,13 @@
 .list-icon {
-	display: flex;
-	flex-direction: column;
-	gap: 2.5rem;
 	font-size: var(--fs-lg);
+	
+	&:not(.swiper) {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+	}
 
-	li {
+	&-item {
 		display: flex;
 		gap: 1.875rem;
 	}
@@ -34,7 +37,7 @@
 		}
 	}
 
-	li {
+	.list-icon-item {
 		gap: 1.25rem;
 	}
 }
