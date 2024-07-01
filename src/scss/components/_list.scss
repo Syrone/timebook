@@ -27,7 +27,10 @@
 }
 
 .list-icon-md {
-	gap: 1.25rem;
+
+	&:not(.swiper) {
+		gap: 1.25rem;
+	}
 
 	.list-icon {
 

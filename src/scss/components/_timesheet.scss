@@ -1,0 +1,7 @@
+.timesheet {
+	display: grid;
+	grid-template-columns: 1fr 38.75rem;
+	align-content: start;
+	justify-content: space-between;
+	gap: 2.5rem;
+}

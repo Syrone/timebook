@@ -2,6 +2,8 @@
 	font-size: var(--fs-md);
 
 	.swiper-slide {
+		width: 100%;
+		
 		&:nth-child(even) {
 			.result__item {
 				color: var(--light-color);
@@ -29,12 +31,6 @@
 			margin-bottom: 1.25rem;
 		}
 	}
-
-	&-bottom {
-		display: flex;
-		justify-content: center;
-		margin-top: 3.125rem;
-	}
 }
 
 .result-sm {
@@ -51,18 +47,25 @@
 		&-text {
 			font-size: var(--fs);
 		}
+	}
+
+	.swiper-slide {
 
 		&:nth-child(even) {
-			color: initial;
-			background: var(--background-light);
+			.result__item {
+				color: initial;
+				background: var(--background-light);
+			}
 		}
 		
 		&:nth-child(8n + 2),
 		&:nth-child(8n + 4),
 		&:nth-child(8n + 5),
 		&:nth-child(8n + 7) {
-			color: var(--light-color);
-			background: var(--primary-color) radial-gradient(40% 40% at 90% 10%, rgba(255, 255, 255, .5) 0%, rgb(133, 187, 21) 100%);
+			.result__item {
+				color: var(--light-color);
+				background: var(--primary-color) radial-gradient(40% 40% at 90% 10%, rgba(255, 255, 255, .5) 0%, rgb(133, 187, 21) 100%);
+			}
 		}
 	}
 }

@@ -11,6 +11,28 @@
 		position: static;
 		text-align: left;
 	}
+
+	&-footer {
+		display: flex;
+		align-items: center;
+		gap: .5rem;
+
+		.swiper-pagination {
+			padding-top: 0;
+		}
+	}
+
+	&-hint {
+		display: none;
+		align-items: center;
+		gap: .375rem;
+		font-size: var(--fs-xs);
+		white-space: nowrap;
+
+		.icon {
+			--_i-color: currentColor;
+		}
+	}
 }
 
 .resizable-swiper {
@@ -32,6 +54,14 @@
 		&--inverse {
 			--swiper-theme-color: var(--secondary-color);
 			--swiper-pagination-bullet-inactive-color: var(--light-color);
+		}
+	}
+
+	.swiper-footer {
+		padding-top: 1rem;
+
+		.swiper-pagination {
+			padding-top: 0;
 		}
 	}
 

@@ -1,28 +1,39 @@
 /** > 1400px **/
 @media (max-width: 87.5rem) {
 
-	// result
-	.result-sm {
-		grid-template-columns: repeat(3, 1fr);
-
-		.result__item {
-			&:nth-child(8n + 5),
-			&:nth-child(8n + 7) {
-				color: initial;
-				background: var(--background-light);
-			}
-
-			&:nth-child(8n + 6),
-			&:nth-child(8n + 8) {
-				color: var(--light-color);
-				background: var(--primary-color) radial-gradient(40% 40% at 90% 10%, rgba(255, 255, 255, .5) 0%, rgb(133, 187, 21) 100%);
-			}
-		}
+	// sections
+	.background-section--inner {
+		margin-inline: calc(var(--container-offset) * -1);
+		padding-inline: var(--container-offset);
 	}
 
 	// implemented
 	.implemented {
 		margin-inline: calc(var(--container-offset) * -1);
+	}
+
+	// result
+	.result-sm {
+
+		.swiper-slide {
+
+			&:nth-child(8n + 2),
+			&:nth-child(8n + 4),
+			&:nth-child(8n + 5),
+			&:nth-child(8n + 7) {
+				.result__item {
+					color: initial;
+					background: var(--background-light);
+				}
+			}
+
+			&:nth-child(even) {
+				.result__item {
+					color: var(--light-color);
+					background: var(--primary-color) radial-gradient(40% 40% at 90% 10%, rgba(255, 255, 255, .5) 0%, rgb(133, 187, 21) 100%);
+				}
+			}
+		}
 	}
 
 }
@@ -55,6 +66,14 @@
 		&-title--bigger,
 		&-subtitle-current {
 			font-size: 6.25rem;
+		}
+
+		&-bottom {
+			margin-top: 2.5rem;
+
+			&__btn {
+				min-width: 20rem;
+			}
 		}
 	}
 
@@ -127,12 +146,67 @@
 			display: none;
 		}
 	}
+	
+	// swipers
+	.swiper {
+
+		&-hint {
+			display: flex;
+		}
+	}
 
 	// accordion
+	.accordion-group--resizable {
+		
+		.accordion-group__start,
+		.accordion-group__end {
+			gap: 1.25rem;
+		}
+
+		.accordion {
+
+			&.is-open {
+
+				.accordion__btn {
+					--_color: var(--secondary-color);
+					--_color-active: var(--secondary-color);
+
+					.primary-color {
+						color: var(--light-color) !important;
+					}
+				}
+			}
+
+			&__btn {
+				--_color-active: var(--secondary-color);
+				
+				.primary-color {
+					transition: color	var(--transition-duration) var(--transition-type);
+				}
+
+				&:is(:active, :focus-visible, .is-active) {
+					.primary-color {
+						color: var(--light-color) !important;
+					}
+				}
+			}
+
+			&__content {
+				background-color: var(--background-light);
+				border-radius: var(--radius-md);
+				padding: 2.5rem 2rem;
+			}
+		}
+	}
+
 	.accordion {
 
 		&-group {
 			gap: 1.25rem;
+
+			&--import {
+				display: flex;
+			}
 		}
 
 		&__cotnent {
@@ -235,8 +309,8 @@
 			padding: 2.5rem;
 		}
 
-		&-bottom {
-			margin-top: 2.5rem;
+		.swiper-slide {
+			width: 26rem;
 		}
 	}
 
@@ -261,8 +335,29 @@
 	}
 
 	// video
+	.video-wrapper--4x3 {
+		aspect-ratio: 16/8;
+	}
+
 	.video-play {
 		--_icon-size: 5rem;
+	}
+
+	// photofixing
+	.photofixing {
+		justify-content: center;
+	}
+
+	// timesheet
+	.timesheet {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		text-align: center;
+	}
+
+	// bourse
+	.bourse {
+		margin-bottom: 3rem;
 	}
 
 	// footer
@@ -348,24 +443,6 @@
 		&:nth-child(4) {
 			grid-column: 1;
 			grid-row: 2;
-		}
-	}
-
-	.result-sm {
-
-		.result__item {
-
-			&:nth-child(8n + 4),
-			&:nth-child(8n + 8) {
-				color: initial;
-				background: var(--background-light);
-			}
-
-			&:nth-child(7n + 4),
-			&:nth-child(8n + 7) {
-				color: var(--light-color);
-				background: var(--primary-color) radial-gradient(40% 40% at 90% 10%, rgba(255, 255, 255, .5) 0%, rgb(133, 187, 21) 100%);
-			}
 		}
 	}
 
@@ -462,6 +539,10 @@
 			&--offset {
 				margin-bottom: 2.5rem;
 			}
+
+			&--center {
+				margin-bottom: .625rem;
+			}
 		}
 
 		&-subtitle {
@@ -478,6 +559,15 @@
 			}
 		}
 
+		&-bottom {
+			margin-top: 1.25rem;
+
+			&__btn {
+				min-width: unset;
+				width: 100%;
+			}
+		}
+
 		&:last-child {
 			padding-bottom: 2.5rem;
 		}
@@ -487,6 +577,13 @@
 	
 		.section:last-child {
 			padding-bottom: 0;
+		}
+
+		&--inner {
+			margin-block: 0 -2.5rem;
+			padding-block: 0 2.5rem;
+			background-image: url(../img/background-2--mobile.webp);
+			background-position: center bottom;
 		}
 	}
 
@@ -529,8 +626,12 @@
 		gap: .75rem;
 		font-size: var(--fs-sm);
 
-		&-item {
+		&:not(.swiper) {
 			gap: .75rem;
+		}
+
+		.list-icon-item {
+			gap: .625rem;
 		}
 	}
 
@@ -585,7 +686,34 @@
 		}
 	}
 
+	// swipers
+	.swiper {
+
+		&-hint {
+			font-size: .625rem;
+		}
+	}
+
 	// accordion
+	.accordion-group--resizable {
+
+		.accordion-group__start,
+		.accordion-group__end {
+			gap: .625rem;
+		}
+
+		.accordion {
+
+			&__btn {
+				font-size: var(--fs-md);
+			}
+
+			&__content {
+				padding: 1.875rem 1rem;
+			}
+		}
+	}
+	
 	.accordion {
 
 		&-group {
@@ -593,6 +721,8 @@
 		}
 
 		&__btn {
+			--_icon-size: 1.5rem;
+
 			font-size: 1rem;
 			padding: .625rem .5rem .625rem 1rem;
 		}
@@ -728,14 +858,6 @@
 				margin-bottom: .625rem;
 			}
 		}
-
-		&-bottom {
-			margin-top: 2rem;
-
-			&__btn {
-				width: 100%;
-			}
-		}
 	}
 	
 	.result-sm {
@@ -745,16 +867,6 @@
 
 			&-title {
 				margin-bottom: .625rem;
-			}
-
-			&:nth-child(8n+7) {
-				color: initial;
-				background: var(--background-light);
-			}
-			
-			&:nth-child(8n+8) {
-				color: var(--light-color);
-				background: var(--primary-color) radial-gradient(40% 40% at 90% 10%, rgba(255, 255, 255, .5) 0%, rgb(133, 187, 21) 100%);
 			}
 		}
 	}
@@ -781,8 +893,65 @@
 	}
 
 	// video
+	.js-video {
+		border-radius: var(--radius-md);
+	}
+
+	.video-wrapper {
+		width: 100%;
+		height: 100%;
+		aspect-ratio: 4 / 3;
+	}
+
 	.video-play {
-		--_icon-size: 10vw;
+		--_icon-size: 6.25rem;
+	}
+
+	// photofixing
+	.photofixing {
+		gap: 1.875rem .625rem;
+		margin-bottom: 3.125rem;
+		
+		&__item {
+			flex-basis: calc(50% - .625rem);
+
+			&-image {
+				height: 5rem;
+				margin-bottom: 0;
+			}
+
+			&-title {
+				font-size: var(--fs-sm);
+			}
+
+			&:last-child {
+				flex-basis: 100%;
+			}
+		}
+	}
+	
+	// timesheet
+	.timesheet {
+		gap: 1.25rem;
+	}
+
+	// bourse
+	.bourse {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.875rem .625rem;
+		margin-bottom: 2.5rem;
+
+		&__item {
+
+			&-image {
+				height: 4.375rem;
+				margin-bottom: .625rem;
+			}
+
+			&-title {
+				font-size: 1rem;
+			}
+		}
 	}
 
 	// footer
