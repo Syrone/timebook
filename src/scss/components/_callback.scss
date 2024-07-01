@@ -1,0 +1,21 @@
+.callback {
+	display: grid;
+	grid-template-columns: minmax(12rem, 15rem) minmax(15rem, 1fr) minmax(15rem, 1fr) minmax(12.5rem, 16.875rem);
+	align-items: center;
+	gap: 1.875rem;
+	background-color: var(--background-light);
+	border-radius: var(--radius-lg);
+	padding: 2.5rem 5rem;
+
+	&__title {
+		font-family: var(--font-family);
+		font-size: var(--fs-xl);
+		font-weight: 400;
+		margin-bottom: 0;
+	}
+
+	&__submit {
+		padding: 1rem 2rem;
+		text-transform: uppercase;
+	}
+}

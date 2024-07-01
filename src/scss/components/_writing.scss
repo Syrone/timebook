@@ -1,0 +1,13 @@
+.writing {
+	display: grid;
+	grid-template-columns: minmax(35rem, 45rem) minmax(20rem, 35rem);
+	justify-content: space-between;
+	gap: 2.5rem 1.875rem;
+	margin-bottom: 3.75rem;
+
+	&__end {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem 1.875rem;
+	}
+}

@@ -1,0 +1,58 @@
+.annex {
+	position: relative;
+	
+	&::before {
+		content: '';
+		width: calc(50% - 6.25rem);
+		height: 15rem;
+		display: block;
+		background-color: var(--primary-color);
+		border-radius: 0 var(--radius-3xl) var(--radius-3xl) 0;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&__container {
+		display: grid;
+		grid-template-columns: .9fr 1fr;
+		align-items: center;
+		gap: 6.25rem;
+	}
+
+	&__picture {
+		min-height: 28.75rem;
+		display: block;
+		position: relative;
+	}
+
+	&__image {
+		width: auto;
+		height: 100%;
+		display: block;
+		object-fit: contain;
+		position: absolute;
+		top: 50%;
+		left: -4rem;
+		transform: translateY(-50%);
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 3.125rem 1.875rem;
+	}
+
+	&__item {
+
+		&-icon {
+			--_i-size: 3.125rem;
+
+			margin-bottom: 1.875rem;
+		}
+
+		&-title {
+		}
+	}
+}

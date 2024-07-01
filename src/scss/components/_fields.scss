@@ -1,27 +1,27 @@
 .field {
-	--_field-fs: var(--fs);
+	--_field-fs: var(--fs-lg);
 	--_field-fw: 400;
 	--_field-lh: var(--lh-1);
 	--_field-color: var(--text-color);
-	--_field-bg: transparent;
+	--_field-bg: var(--background);
 	--_field-duration: var(--transition-duration);
 	--_field-type: var(--transition-type);
 
 	--_field-p-fs: var(--_field-fs);
 	--_field-p-fw: var(--_field-fw);
 	--_field-p-lh: var(--_field-lh);
-	--_field-p-color: var(--text-color);
+	--_field-p-color: rgba(40, 39, 46, .5);
 
 	width: 100%;
-	height: 2.5rem;
+	height: 6.25rem;
 	font-size: var(--_field-fs);
 	font-weight: var(--_field-fw);
 	line-height: var(--_field-lh);
 	color: var(--_field-color);
 	background-color: var(--_field-bg);
-	border: 0;
-	border-radius: 0;
-	padding: .5rem 1.25rem;
+	border: 1px solid rgba($color: #00325E, $alpha: .1);
+	border-radius: var(--radius-3xl);
+	padding: .5rem 2.5rem;
 	outline: none;
 	transition-property: color, background, border;
 	transition-duration: var(--_field-duration);
@@ -32,5 +32,44 @@
 		font-weight: var(--_field-p-fw);
 		line-height: var(--_field-p-lh);
 		color: var(--_field-p-color);
+	}
+
+	&:focus-visible {
+		box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+		&::placeholder {
+			opacity: 0;
+		}
+	}
+}
+
+.form-field	{
+	position: relative;
+
+	&-icon {
+		--_i-size: 1.5rem;
+
+		position: absolute;
+		top: 50%;
+		right: 2.5rem;
+		transform: translateY(-50%);
+	}
+
+	&--phone {
+
+		.field {
+			padding: .5rem 4rem .5rem 2.5rem;
+		}
+
+		.form-field-icon {
+			pointer-events: none;
+		}
+	}
+}
+
+.form-hint {
+
+	&-link {
+		display: inline;
 	}
 }
