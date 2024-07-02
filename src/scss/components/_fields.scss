@@ -1,3 +1,14 @@
+.form-control {
+
+	&__title {
+		font-family: var(--font-family);
+		font-size: var(--fs-lg);
+		font-weight: 400;
+		line-height: var(--lh-1);
+		margin-bottom: 0.625rem;
+	}
+}
+
 .field {
 	--_field-fs: var(--fs-lg);
 	--_field-fw: 400;

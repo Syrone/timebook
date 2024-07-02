@@ -1,0 +1,26 @@
+.contract {
+	display: grid;
+	grid-template-columns: minmax(30rem, 56.25rem) minmax(30rem, 42.5rem);
+	align-items: center;
+	gap: 1.875rem;
+
+	&__end {
+		position: relative;
+	}
+
+	&__image {
+		min-height: 20rem;
+		display: block;
+		margin-inline: auto;
+		object-fit: contain;
+	}
+
+	&__btn {
+		--_icon-size: 11.25rem;
+
+		position: absolute;
+		left: 5rem;
+		bottom: 5rem;
+		z-index: 1;
+	}
+}

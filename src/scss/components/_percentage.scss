@@ -36,3 +36,12 @@
 		}
 	}
 }
+
+@media (min-width: 75rem) {
+	.percentage__list {
+
+		.swiper-slide {
+			width: 100%;
+		}
+	}
+}

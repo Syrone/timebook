@@ -34,6 +34,22 @@
 	color: var(--text-color) !important;
 }
 
+.text-background {
+	display: inline-block;
+	color: var(--light-color);
+	background-color: var(--primary-color);
+	border-radius: var(--radius-3xl);
+	padding: 0 1.5rem;
+}
+
+.text-background-outline {
+	display: inline-block;
+	background-color: transparent;
+	border: 2px solid var(--primary-color);
+	border-radius: var(--radius-3xl);
+	padding: 0 1.5rem;
+}
+
 .text-background-light {
 	display: inline-block;
 	color: var(--primary-color);

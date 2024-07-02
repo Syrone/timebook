@@ -1,6 +1,6 @@
 .contacts {
 	display: grid;
-	grid-template-columns: minmax(24rem, 25rem) minmax(16rem, 20rem) minmax(18.75rem, 23.75rem);
+	grid-template-columns: minmax(24rem, 25rem) minmax(16rem, 20rem);
 	align-items: center;
 	justify-content: space-between;
 	gap: 1.875rem;
@@ -9,6 +9,10 @@
 	border: 1px solid #eee;
 	border-radius: var(--radius-lg);
 	padding: 2.5rem 5rem;
+
+	&--author {
+		grid-template-columns: minmax(24rem, 25rem) minmax(16rem, 20rem) minmax(18.75rem, 23.75rem);
+	}
 
 	&__start {
 		display: flex;

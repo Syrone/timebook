@@ -12,6 +12,8 @@
 
 		&-btn {
 			min-height: 5rem;
+			font-family: var(--font-title);
+			text-transform: uppercase;
 			padding: .5rem 3.125rem;
 		}
 	}
@@ -108,6 +110,77 @@
 			width: 100%;
 			height: 100%;
 			display: block;
+		}
+	}
+
+	&--horizontal {
+		display: grid;
+		grid-template-columns: minmax(26rem, 32.5rem) minmax(50rem, 61.25rem);
+		align-items: start;
+		gap: 1.875rem;
+
+		.tabs__nav {
+			height: 100%;
+			flex-direction: column;
+			justify-content: flex-start;
+			gap: 1rem;
+			margin-bottom: 0;
+			white-space: initial;
+			overflow: visible;
+
+			&-btn {
+				width: 100%;
+				min-height: 6.875rem;
+				border-radius: var(--radius-md);
+			}
+		}
+
+		.tabs__panel,
+		.tabs__inner {
+			height: 100%;
+		}
+
+		.tabs__inner {
+			grid-template-columns: 1fr;
+			gap: 3.125rem;
+			position: relative;
+
+			&-item {
+
+				&:first-child {
+
+					.tabs__inner-title {
+						max-width: 42rem;
+					}
+				}
+			}
+
+			.list-icon,
+			&-title {
+				max-width: 26rem;
+			}
+
+			&-title {
+				margin-bottom: 2.5rem;
+			}
+
+			&-picture {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				pointer-events: none;
+			}
+
+			&-image {
+				width: 33.75rem;
+				height: 32.5rem;
+				object-fit: contain;
+				background-color: transparent;
+				border-radius: 0;
+				position: absolute;
+				bottom: -2.5rem;
+				right: -7.5rem;
+			}
 		}
 	}
 }

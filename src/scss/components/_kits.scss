@@ -1,0 +1,47 @@
+.kits {
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+		background-color: var(--background-light);
+		border-radius: var(--radius-lg);
+		padding: 5rem 3.75rem;
+
+		&-title {
+			margin-bottom: 0;
+		}
+
+		&-list {
+			margin-bottom: 1rem;
+
+			&:not(.swiper) {
+				gap: 1rem;
+			}
+		}
+
+		&-btn {
+			margin-top: auto;
+			padding: 1rem 2rem;
+			text-transform: uppercase;
+		}
+	}
+}
+
+@media (min-width: 75rem) {
+	.kits {
+
+		.swiper-slide {
+			width: 100%;
+		}
+
+		&__item {
+
+			&-list {
+				.list-icon-svg {
+					--_i-size: 1.875rem;
+				}
+			}
+		}
+	}
+}

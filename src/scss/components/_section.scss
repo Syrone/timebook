@@ -14,6 +14,10 @@
 			justify-content: center;
 			text-align: center;
 
+			&-lg {
+				max-width: 80rem;
+			}
+
 			~ .section-text {
 				text-align: center;
 			}
@@ -21,6 +25,10 @@
 
 		&--offset {
 			margin-bottom: 5rem;
+
+			.section-title {
+				margin-bottom: 0;
+			}
 		}
 	}
 
@@ -105,6 +113,15 @@
 
 	.section:last-child {
 		padding-bottom: 0;
+	}
+
+	&--bigger {
+		margin-block: -18.75rem;
+		padding-block: 18.75rem;
+
+		&:last-child {
+			padding-bottom: 25rem;
+		}
 	}
 
 	&--inner {

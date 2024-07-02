@@ -1,0 +1,164 @@
+<div class="graph-modal">
+	<div class="graph-modal__container graph-modal__container--md graph-modal__container--background" role="dialog" aria-modal="true" data-graph-target="modal-demo">
+		<button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+			<span class="icon">
+				<svg>
+					<use xlink:href="img/icons/x.svg#svg-x"></use>
+				</svg>
+			</span>
+		</button>
+		<div class="graph-modal__content">
+			<form class="graph-modal__form">
+				<h2 class="h6 graph-modal__form-title">
+					Заказать бесплатную демонстрацию продукта
+				</h2>
+				<p class="graph-modal__form-text">
+					Перезвоним вам в течение 10 минут согласуем дату и время демонстрации
+				</p>
+
+				<div class="form-control graph-modal__form-control">
+					<div class="form-field form-field--phone">
+						<input type="tel" class="field" name="tel" placeholder="+7 (___) ___-__-__" required="">
+						<span class="icon form-field-icon">
+							<svg>
+								<use xlink:href="img/icons/phone.svg#svg-phone"></use>
+							</svg>
+						</span>
+					</div>
+				</div>
+
+				<button type="submit" class="btn btn-primary graph-modal__form-submit">
+					заказать демонстрацию
+				</button>
+
+				<div class="form-hint graph-modal__form-hint">
+					*Нажимая кнопку «Заказать демонстрацию», вы соглашаетесь с условиями политики конфиденциальности
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="graph-modal__container graph-modal__container--md graph-modal__container--background" role="dialog" aria-modal="true" data-graph-target="modal-callback">
+		<button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+			<span class="icon">
+				<svg>
+					<use xlink:href="img/icons/x.svg#svg-x"></use>
+				</svg>
+			</span>
+		</button>
+		<div class="graph-modal__content">
+			<form class="graph-modal__form">
+				<h2 class="h6 graph-modal__form-title">
+					Перезвоните мне
+				</h2>
+				<p class="graph-modal__form-text">
+					Введите ваш номер телефона и мы <br>
+					Вам перезвоним в течении 10 минут
+				</p>
+
+				<div class="form-control graph-modal__form-control">
+					<div class="form-field form-field--phone">
+						<input type="tel" class="field" name="tel" placeholder="+7 (___) ___-__-__" required="">
+						<span class="icon form-field-icon">
+							<svg>
+								<use xlink:href="img/icons/phone.svg#svg-phone"></use>
+							</svg>
+						</span>
+					</div>
+				</div>
+
+				<button type="submit" class="btn btn-primary graph-modal__form-submit">
+					заказать демонстрацию
+				</button>
+
+				<div class="form-hint graph-modal__form-hint">
+					*Нажимая кнопку «Заказать демонстрацию», вы соглашаетесь с условиями политики конфиденциальности
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-quiz">
+		<button class="btn js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+			<span class="icon">
+				<svg>
+					<use xlink:href="img/icons/x.svg#svg-x"></use>
+				</svg>
+			</span>
+		</button>
+		<div class="graph-modal__content">
+			<div class="quiz">
+				<h2 class="quiz__title">
+					Расчитай эффективность внедрения WFM-системы
+				</h2>
+
+				<form class="quiz__form">
+					<div class="form-control quiz__form-control">
+						<h3 class="form-control__title">
+							Название организации
+						</h3>
+						<div class="form-field">
+							<input type="text" class="field" name="name" placeholder="Например,  Таймбук Сервис" required="">
+						</div>
+					</div>
+					<div class="form-control quiz__form-control">
+						<h3 class="form-control__title">
+							Количество сотрудников
+						</h3>
+
+						<div class="range">
+							<div class="range-field">
+								<input type="range" class="range-input" min="0" max="100000" value="0">
+								<span class="range-track"></span>
+								<div class="range-set">
+									<span class="range-current" data-postfix="чел">0</span>
+									<button type="button" class="btn range-btn"></button>
+								</div>
+							</div>
+							<div class="range-value">
+								<span class="range-value-min"></span>
+								<span class="range-value-max"></span>
+							</div>
+						</div>
+					</div>
+					<div class="form-control quiz__form-control">
+						<h3 class="form-control__title">
+							Сфера деятельности организации
+						</h3>
+						<select class="js-choices">
+							<option value="1">Ритейл</option>
+							<option value="2">Что-то второе</option>
+							<option value="3">Что-то третье</option>
+						</select>
+					</div>
+					<div class="form-control quiz__form-control">
+						<h3 class="form-control__title">
+							Количество объектов учета
+						</h3>
+
+						<div class="range">
+							<div class="range-field">
+								<input type="range" class="range-input" min="0" max="100" value="0">
+								<span class="range-track"></span>
+								<div class="range-set">
+									<span class="range-current">0</span>
+									<button type="button" class="btn range-btn"></button>
+								</div>
+							</div>
+							<div class="range-value">
+								<span class="range-value-min"></span>
+								<span class="range-value-max"></span>
+							</div>
+						</div>
+					</div>
+
+					<button type="submit" class="btn btn-primary quiz__form-submit">
+						расчитать эффективность внедрения
+					</button>
+
+					<div class="form-hint quiz__form-hint">
+						*Нажимая кнопку «Расчитать эффективность внедрения», вы соглашаетесь с условиями политики конфиденциальности
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,117 @@
+$choices-font-size-lg: var(--fs-lg);
+$choices-guttering: 0;
+$choices-border-radius: var(--radius-3xl);
+$choices-bg-color-dropdown: var(--background);
+
+@import "../../node_modules/choices.js/src/styles/choices.scss";
+
+.#{$choices-selector} {
+	color: var(--text-color);
+
+	&.is-open {
+		
+		.#{$choices-selector}__item {
+	
+			&-icon {
+				transform: initial;
+			}
+		}
+  }
+
+	.#{$choices-selector}__inner {
+		min-height: 6.25rem;
+		display: flex;
+		align-items: center;
+		gap: .25rem;
+		background-color: var(--background);
+		font-size: inherit;
+		border: 1px solid rgba($color: #00325E, $alpha: .1);
+		border-radius: var(--radius-3xl);
+		padding: 0.5rem 2.5rem;
+		z-index: 1010;
+	}
+
+	.#{$choices-selector}__placeholder {
+		color: var(--gray-color);
+		opacity: 1;
+	}
+
+	.#{$choices-selector}__list--single {
+		display: block;
+		height: 100%;
+		padding: 0;
+
+		[dir="rtl"] & {
+			padding: 0;
+		}
+	}
+
+	.#{$choices-selector}__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&-icon {
+			--_i-size: 2.25rem;
+			--_i-color: var(--primary-color);
+
+			transform: rotateX(180deg);
+			transition: transform var(--transition-duration) var(--transition-type);
+		}
+	}
+
+	&[data-type*='select-one'] {
+
+		&::after {
+			all: initial;
+		}
+
+		.#{$choices-selector}__inner {
+			padding: 0.5rem 2.5rem;
+		}
+	}
+}
+
+%choices-dropdown {
+	min-width: 3.75rem;
+  margin-top: 1rem;
+	word-break: unset;
+	border: 1px solid rgba($color: #00325E, $alpha: .1);
+	border-radius: var(--radius-3xl);
+	padding: 1rem 2.5rem;
+	z-index: 1010;
+
+	.#{$choices-selector}__list {
+		color: var(--text-color);
+		overflow-x: hidden;
+	}
+
+	.#{$choices-selector}__placeholder {
+		display: none;
+	}
+
+	.#{$choices-selector}__item--selectable {
+		font-size: inherit;
+		padding: .25rem;
+		white-space: nowrap;
+		transition: color var(--transition-duration) var(--transition-type);
+
+		&.is-selected {
+			color: var(--primary-color);
+		}
+
+		&.is-highlighted {
+      background-color: transparent;
+    }
+	}
+
+	.is-open & {
+		border-color: rgba($color: #00325E, $alpha: .1);
+	}
+}
+
+@media (hover: hover) {
+	%choices-dropdown .#{$choices-selector}__item--selectable:hover {
+		color: var(--secondary-color);
+	}
+}

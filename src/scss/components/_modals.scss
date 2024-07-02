@@ -1,0 +1,60 @@
+.graph-modal {
+
+	&__close {
+		--_opacity: .5;
+		--_opacity-active: 1;
+
+		width: 1.25rem;
+		height: 1.25rem;
+		background-image: initial;
+		top: 1.875rem;
+		right: 2.5rem;
+	}
+	
+	&__container {
+		width: calc(100% - var(--container-offset) * 2);
+		max-width: 75rem;
+		border: 1px solid rgba($color: #00325E, $alpha: .1);
+		border-radius: var(--radius-3xl);
+		padding: 5rem 6.25rem 6.25rem;
+
+		&--md {
+			max-width: 44rem;
+			padding: 6.25rem;
+		}
+
+		&--background {
+			background-image: url(../img/background-modal.webp);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+	}
+
+	&__form {
+		text-align: center;
+
+		&-title {
+			margin: 0 calc(2rem * -1) 1rem;
+		}
+
+		&-text {
+			font-size: var(--fs-lg);
+			margin-bottom: 3rem;
+		}
+
+		&-control,
+		&-submit {
+			margin-bottom: 1.25rem;
+		}
+
+		&-submit {
+			width: 100%;
+			text-transform: uppercase;
+		}
+
+		&-hint {
+			font-size: var(--fs-sm);
+		}
+	}
+}

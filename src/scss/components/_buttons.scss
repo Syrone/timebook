@@ -3,6 +3,7 @@
 		color: var(--_color-active);
 		background-color: var(--_background-color-active);
 		border-color: var(--_border-color-active);
+		opacity: var(--_opacity-active);
 
 		.icon {
 			color: var(--_icon-color-active);
@@ -13,7 +14,8 @@
 .btn {
 	--_color: var(--text-color);
 	--_background-color: transparent;
-
+	--_opacity: 1;
+	
 	--_icon-size: 1rem;
 	--_icon-color: currentColor;
 
@@ -24,6 +26,7 @@
 	--_background-color-active: transparent;
 	--_border-color-active: transparent;
 	--_icon-color-active: currentColor;
+	--_opacity-active: 1;
 
 	display: flex;
 	align-items: center;
@@ -35,6 +38,7 @@
 	background-color: var(--_background-color);
 	border: 0;
 	padding: 0;
+	opacity: var(--_opacity);
 	transition: color var(--_transition-duration) var(--_transition-type), background var(--_transition-duration) var(--_transition-type), border var(--_transition-duration) var(--_transition-type), transform var(--_transition-duration) var(--_transition-type);
 	cursor: pointer;
 	outline: none;
@@ -50,6 +54,7 @@
 		color: var(--_color-active);
 		background-color: var(--_background-color-active);
 		border-color: var(--_border-color-active);
+		opacity: var(--_opacity-active);
 
 		.icon {
 			color: var(--_icon-color-active);
@@ -71,6 +76,7 @@
 	--_color-active: var(--light-color);
 	--_background-color-active: var(--secondary-color);
 
+	font-family: var(--font-title);
 	min-height: 6.25rem;
 	font-size: var(--fs-lg);
 	font-weight: 700;
@@ -85,6 +91,7 @@
 	--_color-active: var(--light-color);
 	--_background-color-active: var(--secondary-color);
 
+	font-family: var(--font-title);
 	min-height: 6.25rem;
 	font-size: var(--fs-lg);
 	font-weight: 700;
@@ -99,6 +106,7 @@
 	--_color-active: var(--light-color);
 	--_background-color-active: var(--primary-color);
 
+	font-family: var(--font-title);
 	min-height: 6.25rem;
 	font-size: var(--fs-lg);
 	font-weight: 700;
