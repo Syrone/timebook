@@ -1,0 +1,35 @@
+.staff {
+
+	.swiper-slide {
+		width: 22.5rem;
+	}
+
+	&__item {
+		font-size: var(--fs-lg);
+		text-align: center;
+
+		&-image {
+			width: auto;
+			height: 12.5rem;
+			display: block;
+			margin-bottom: 1.875rem;
+			border-radius: 6.25rem;
+		}
+
+		&-title {
+			margin-bottom: .625rem;
+		}
+	}
+}
+
+@media (min-width: 75rem) {
+	.staff {
+
+		.swiper-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			gap: 5rem 2.5rem;
+		}
+	}
+}
