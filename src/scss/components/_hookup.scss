@@ -4,12 +4,6 @@
 	justify-content: space-between;
 	gap: 1.875rem;
 
-	&__start {
-		.list-icon-item {
-			align-items: center;
-		}
-	}
-
 	&__text {
 		font-size: var(--fs-lg);
 		margin-bottom: 1rem;

@@ -4,7 +4,7 @@
 	.swiper-slide {
 		width: 100%;
 		
-		&:nth-child(even) {
+		&:nth-child(odd) {
 			.result__item {
 				color: var(--light-color);
 				background: var(--primary-color) radial-gradient(40% 40% at 90% 10%, rgba(255, 255, 255, .5) 0%, rgb(133, 187, 21) 100%);
@@ -51,7 +51,7 @@
 
 	.swiper-slide {
 
-		&:nth-child(even) {
+		&:nth-child(odd) {
 			.result__item {
 				color: initial;
 				background: var(--background-light);

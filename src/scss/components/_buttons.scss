@@ -69,6 +69,14 @@
 	font: inherit;
 }
 
+.btn-link {
+	--_color: inherit;
+
+	width: auto;
+	display: inline-block;
+	font: inherit;
+}
+
 .btn-primary {
 	--_color: var(--light-color);
 	--_background-color: var(--primary-color);
@@ -122,6 +130,7 @@
 .btn-lg {
 	min-height: 7.5rem;
 	font-size: var(--fs-xl);
+	border-radius: 3.75rem;
 	padding: 1rem 5rem;
 	text-transform: uppercase;
 }

@@ -367,7 +367,7 @@
 	.risk {
 
 		&__container {
-			grid-template-columns: minmax(20rem, 75rem);
+			grid-template-columns: minmax(16rem, 75rem);
 			gap: 4rem;
 		}
 	}
@@ -597,7 +597,8 @@
 	.footer {
 		padding-bottom: 6rem;
 
-		&__inner {
+		&__inner,
+		&__bottom .footer__inner {
 			grid-template-columns: 16rem auto auto auto;
 			gap: .5rem 2rem;
 		}
@@ -744,7 +745,8 @@
 	// footer
 	.footer {
 
-		&__inner {
+		&__inner,
+		&__bottom .footer__inner {
 			grid-template-columns: auto auto auto;
 			grid-template-rows: auto auto;
 		}
@@ -1075,7 +1077,7 @@
 		&__btn {
 			--_icon-size: 1.5rem;
 
-			font-size: 1rem;
+			font-size: var(--fs-md);
 			padding: 1.125rem 1rem 1.125rem 1.5rem;
 		}
 
@@ -1273,6 +1275,14 @@
 		&__container {
 			gap: 2.5rem;
 		}
+
+		&__list {
+			font-size: var(--fs);
+		}
+
+		.list-icon-title {
+			font-size: var(--h6);
+		}
 	}
 
 	// result
@@ -1453,6 +1463,8 @@
 		padding-inline: var(--container-offset);
 
 		&__title {
+			max-width: 15rem;
+			margin-inline: auto;
 			font-family: var(--font-title);
 			font-size: 1rem;
 			font-weight: 700;
@@ -1654,7 +1666,8 @@
 			font-size: 1.5rem;
 		}
 
-		&__inner {
+		&__inner,
+		&__bottom .footer__inner {
 			grid-template-columns: 1fr;
 			grid-template-rows: initial;
 			justify-items: flex-start;
@@ -1722,7 +1735,8 @@
 	.footer {
 		text-align: center;
 
-		&__inner {
+		&__inner,
+		&__bottom .footer__inner {
 			justify-items: center;
 		}
 
