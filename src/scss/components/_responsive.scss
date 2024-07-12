@@ -23,6 +23,14 @@
 		}
 	}
 
+	// modals
+	.graph-modal {
+
+		&__container {
+			max-width: 50rem;
+		}
+	}
+
 	// implemented
 	.implemented {
 		margin-inline: calc(var(--container-offset) * -1);
@@ -66,6 +74,19 @@
 
 		&__image {
 			left: 0;
+		}
+	}
+	
+	// quiz
+	.quiz {
+
+		&__form {
+			grid-template-columns: 1fr;
+			gap: 2.5rem;
+
+			&-hint {
+				text-align: center;
+			}
 		}
 	}
 
@@ -725,19 +746,6 @@
 
 		&__item {
 			gap: 2.5rem;
-		}
-	}
-
-	// quiz
-	.quiz {
-
-		&__form {
-			grid-template-columns: 1fr;
-			gap: 2.5rem;
-
-			&-hint {
-				text-align: center;
-			}
 		}
 	}
 

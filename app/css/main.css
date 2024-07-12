@@ -2758,6 +2758,9 @@ p + p {
     height: calc(6.5rem + 30vw);
     bottom: calc(0.5rem - 4vw);
   }
+  .graph-modal__container {
+    max-width: 50rem;
+  }
   .implemented {
     margin-inline: calc(var(--container-offset) * -1);
   }
@@ -2778,6 +2781,14 @@ p + p {
   }
   .annex__image {
     left: 0;
+  }
+  .quiz__form {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .quiz__form-hint {
+    text-align: center;
   }
 }
 /** > 1200px **/
@@ -3254,14 +3265,6 @@ p + p {
   }
   .tasks__item {
     gap: 2.5rem;
-  }
-  .quiz__form {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-  .quiz__form-hint {
-    text-align: center;
   }
   .footer__inner, .footer__bottom .footer__inner {
     -ms-grid-columns: auto auto auto;
