@@ -1771,26 +1771,28 @@ p + p {
   appearance: none;
   width: 1.5rem;
   height: 1.5rem;
-  background: transparent;
+  background: none;
+  background-color: transparent;
   border: none;
+  border-radius: 50%;
   -webkit-box-shadow: none;
   box-shadow: none;
   outline: none;
   pointer-events: auto;
   opacity: 0;
-  cursor: pointer;
 }
 .range-input[type=range]::-moz-range-thumb {
   -moz-appearance: none;
   width: 1.5rem;
   height: 1.5rem;
-  background: transparent;
+  background: none;
+  background-color: transparent;
   border: none;
+  border-radius: 50%;
   box-shadow: none;
   outline: none;
   pointer-events: auto;
   opacity: 0;
-  cursor: pointer;
 }
 .range-btn {
   --_background-color: var(--primary-color);

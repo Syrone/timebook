@@ -59,26 +59,28 @@
 				appearance: none;
 				width: 1.5rem;
 				height: 1.5rem;
-				background: transparent;
+				background: none;
+				background-color: transparent;
 				border: none;
+				border-radius: 50%;
 				box-shadow: none;
 				outline: none;
 				pointer-events: auto;
 				opacity: 0;
-				cursor: pointer;
 			}
 
 			&::-moz-range-thumb {
 				-moz-appearance: none;
 				width: 1.5rem;
 				height: 1.5rem;
-				background: transparent;
+				background: none;
+				background-color: transparent;
 				border: none;
+				border-radius: 50%;
 				box-shadow: none;
 				outline: none;
 				pointer-events: auto;
 				opacity: 0;
-				cursor: pointer;
 			}
 		}
 	}
