@@ -379,11 +379,10 @@
 		min-height: 3.75rem;
 		margin-inline: var(--container-offset);
 		padding: 1rem 2.5rem;
-		writing-mode: initial;
 		top: auto;
-		right: calc(50% - var(--container-offset));
+		left: calc(50% - var(--container-offset));
 		bottom: 0;
-		transform: translateX(50%);
+		transform: translateX(-50%);
 		border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 	}
 

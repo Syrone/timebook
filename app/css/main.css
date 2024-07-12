@@ -1772,6 +1772,8 @@ p + p {
   width: 1.5rem;
   height: 1.5rem;
   background: none;
+  border: none;
+  outline: none;
   pointer-events: auto;
   cursor: pointer;
 }
@@ -1780,6 +1782,8 @@ p + p {
   width: 1.5rem;
   height: 1.5rem;
   background: none;
+  border: none;
+  outline: none;
   pointer-events: auto;
   cursor: pointer;
 }
@@ -2008,20 +2012,20 @@ p + p {
   }
 }
 .btn-efficacy {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   min-height: -webkit-max-content;
   min-height: -moz-max-content;
   min-height: max-content;
-  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
-  padding: 3.125rem 1.5rem;
-  -webkit-writing-mode: vertical-rl;
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  padding: 1.5rem 3.125rem;
   position: fixed;
   top: 50%;
-  right: 0;
-  -webkit-transform: translateY(-50%) rotate(180deg);
-  -ms-transform: translateY(-50%) rotate(180deg);
-  transform: translateY(-50%) rotate(180deg);
+  left: calc(100% - 18.25rem);
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+  -ms-transform: translateY(-50%) rotate(-90deg);
+  transform: translateY(-50%) rotate(-90deg);
   z-index: 1;
 }
 
@@ -2969,15 +2973,12 @@ p + p {
     min-height: 3.75rem;
     margin-inline: var(--container-offset);
     padding: 1rem 2.5rem;
-    -webkit-writing-mode: initial;
-    -ms-writing-mode: initial;
-    writing-mode: initial;
     top: auto;
-    right: calc(50% - var(--container-offset));
+    left: calc(50% - var(--container-offset));
     bottom: 0;
-    -webkit-transform: translateX(50%);
-    -ms-transform: translateX(50%);
-    transform: translateX(50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
     border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   }
   .result__item {
