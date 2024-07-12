@@ -59,10 +59,12 @@
 				appearance: none;
 				width: 1.5rem;
 				height: 1.5rem;
-				background: none;
+				background: transparent;
 				border: none;
+				box-shadow: none;
 				outline: none;
 				pointer-events: auto;
+				opacity: 0;
 				cursor: pointer;
 			}
 
@@ -70,10 +72,12 @@
 				-moz-appearance: none;
 				width: 1.5rem;
 				height: 1.5rem;
-				background: none;
+				background: transparent;
 				border: none;
+				box-shadow: none;
 				outline: none;
 				pointer-events: auto;
+				opacity: 0;
 				cursor: pointer;
 			}
 		}
