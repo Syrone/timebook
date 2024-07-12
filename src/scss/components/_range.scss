@@ -1,9 +1,9 @@
 .range {
 	width: 100%;
-	min-height: 6.25rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
+	margin-top: 4.25rem;
 
 	&-field {
 		width: 100%;
@@ -94,5 +94,9 @@
 		align-items: center;
 		justify-content: space-between;
 		margin-top: .75rem;
+	}
+
+	&-control {
+		margin-top: 1rem;
 	}
 }

@@ -3,6 +3,7 @@ const range = document.querySelectorAll('.range');
 range?.forEach(el => {
 	const current = el.querySelector('.range-current'),
 				input = el.querySelector('.range-input'),
+				control = el.querySelector('.range-control-field'),
 				track = el.querySelector('.range-track'),
 				setEl = el.querySelector('.range-set'),
 				minEl = el.querySelector('.range-value-min'),
@@ -44,6 +45,23 @@ range?.forEach(el => {
 		updateSlider();
 	};
 
+	const updateInputFromControl = () => {
+		let value = parseInt(control.value);
+		const min = parseInt(input.min);
+		const max = parseInt(input.max);
+
+		if (isNaN(value) || value < min) {
+			value = min;
+		} else if (value > max) {
+			value = max;
+		}
+
+		input.value = value;
+		control.value = value
+		updateSlider();
+	};
+
 	input.addEventListener('input', updateSlider);
+	control.addEventListener('input', updateInputFromControl);
 	initializeSlider();
 });

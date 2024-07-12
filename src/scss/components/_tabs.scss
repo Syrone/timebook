@@ -39,9 +39,15 @@
 			grid-template-columns: repeat(2, 1fr);
 			gap: 1.875rem;
 
+			&_image {
+				display: block;
+				width: 100%;
+			}
+
 			&--video {
 				min-height: 26.25rem;
 				grid-template-columns: 1fr;
+				align-items: center;
 			}
 		}
 

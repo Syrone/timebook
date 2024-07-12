@@ -35,5 +35,13 @@ const selectConfig = {
 }
 
 selectChoices?.forEach((select) => {
-  new Choices(select, selectConfig)
-})
+  const choices = new Choices(select, selectConfig);
+  const choicesField = choices.containerOuter.element.nextElementSibling
+
+  select.addEventListener('change', function(event) {
+    if (event.target.value === 'your-option') {
+      choices.containerOuter.element.style.display = 'none';
+      choicesField.style.display = 'block';
+    }
+  });
+});

@@ -106,7 +106,7 @@
 
 						<div class="range">
 							<div class="range-field">
-								<input type="range" class="range-input" min="0" max="3000" step="50" value="0">
+								<input type="range" class="range-input" min="0" max="3000" value="0">
 								<span class="range-track"></span>
 								<div class="range-set">
 									<span class="range-current" data-postfix="чел">0</span>
@@ -117,6 +117,9 @@
 								<span class="range-value-min"></span>
 								<span class="range-value-max"></span>
 							</div>
+							<div class="range-control">
+								<input type="text" class="field range-control-field" placeholder="Введите кол-во">
+							</div>
 						</div>
 					</div>
 					<div class="form-control quiz__form-control">
@@ -125,9 +128,16 @@
 						</h3>
 						<select class="js-choices">
 							<option value="1">Ритейл</option>
-							<option value="2">Что-то второе</option>
-							<option value="3">Что-то третье</option>
+							<option value="2">Строительство</option>
+							<option value="3">Оказание услуг</option>
+							<option value="4">Кафе/рестораны</option>
+							<option value="5">Медицина</option>
+							<option value="6">Производство</option>
+							<option value="your-option">Иное(вписать руками)</option>
 						</select>
+						<div class="js-choices-field form-field" style="display: none;">
+							<input type="text" class="field" placeholder="Иное (вписать руками)" required>
+						</div>
 					</div>
 					<div class="form-control quiz__form-control">
 						<h3 class="form-control__title">
@@ -146,6 +156,9 @@
 							<div class="range-value">
 								<span class="range-value-min"></span>
 								<span class="range-value-max"></span>
+							</div>
+							<div class="range-control">
+								<input type="text" class="field range-control-field" placeholder="Введите кол-во">
 							</div>
 						</div>
 					</div>

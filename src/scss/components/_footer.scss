@@ -16,7 +16,8 @@
 		padding-top: 2rem;
 
 		.footer__inner {
-			grid-template-columns: 20rem auto auto;
+			grid-template-columns: 20rem auto auto auto;
+			align-items: center;
 		}
 	}
 

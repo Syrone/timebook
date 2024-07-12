@@ -772,6 +772,14 @@
 				}
 			}
 		}
+
+		&__bottom .footer__inner {
+			grid-template-columns: auto auto;
+		}
+
+		&__text-link {
+			justify-content: flex-start;
+		}
 	}
 
 }
