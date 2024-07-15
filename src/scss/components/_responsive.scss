@@ -333,7 +333,7 @@
 			gap: 1.5rem;
 		}
 
-		&__phone {
+		&__phone-whatsapp {
 			--_icon-size: 2.5rem
 		}
 
@@ -1212,14 +1212,20 @@
 		}
 
 		&__phone {
-			--_icon-size: 1.5rem;
+
+			&-whatsapp {
+				--_icon-size: 1.5rem;
+			}
 
 			flex-direction: row-reverse;
 			gap: .75rem;
-			font-size: var(--fs-sm);
 
-			&-content--tiny {
-				display: none;
+			&-content {
+				font-size: var(--fs-sm);
+				
+				&--tiny {
+					display: none;
+				}
 			}
 		}
 		
