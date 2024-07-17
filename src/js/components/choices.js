@@ -38,6 +38,8 @@ selectChoices?.forEach((select) => {
   const choices = new Choices(select, selectConfig);
   const choicesField = choices.containerOuter.element.nextElementSibling
 
+  choicesField.style.display = 'none';
+
   select.addEventListener('change', function(event) {
     if (event.target.value === 'your-option') {
       choices.containerOuter.element.style.display = 'none';

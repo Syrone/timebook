@@ -6,3 +6,4 @@ import './components/transfer.js';
 import './components/modals.js';
 import './components/choices.js';
 import './components/range.js';
+import './components/form.js';

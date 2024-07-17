@@ -36,7 +36,7 @@
       </div>
       <div class="header__end">
         <div class="header__phone">
-          <a href="Wa.me/+79092828578" target="_blank" class="btn header__phone-whatsapp">
+          <a href="https://wa.me/+79092828578" target="_blank" class="btn header__phone-whatsapp">
             <span class="icon">
               <svg>
                 <use xlink:href="img/icons/whatsapp.svg#svg-whatsapp"></use>
@@ -60,6 +60,7 @@
 </header>
 
     <main class="main">
+      <h1 class="visually-hidden"></h1>
       <div class="main-sections">
 
       </div>
@@ -74,7 +75,7 @@
 			</span>
 		</button>
 		<div class="graph-modal__content">
-			<form class="graph-modal__form">
+			<form class="graph-modal__form js-form">
 				<h2 class="h6 graph-modal__form-title">
 					Заказать бесплатную демонстрацию продукта
 				</h2>
@@ -84,7 +85,7 @@
 
 				<div class="form-control graph-modal__form-control">
 					<div class="form-field form-field--phone">
-						<input type="tel" class="field" name="tel" placeholder="+7 (___) ___-__-__" required="">
+						<input type="tel" class="field field-tel" name="Телефон" placeholder="+7 (___) ___-__-__">
 						<span class="icon form-field-icon">
 							<svg>
 								<use xlink:href="img/icons/phone.svg#svg-phone"></use>
@@ -112,7 +113,7 @@
 			</span>
 		</button>
 		<div class="graph-modal__content">
-			<form class="graph-modal__form">
+			<form class="graph-modal__form js-form">
 				<h2 class="h6 graph-modal__form-title">
 					Перезвоните мне
 				</h2>
@@ -123,7 +124,7 @@
 
 				<div class="form-control graph-modal__form-control">
 					<div class="form-field form-field--phone">
-						<input type="tel" class="field" name="tel" placeholder="+7 (___) ___-__-__" required="">
+						<input type="tel" class="field field-tel" name="Телефон" placeholder="+7 (___) ___-__-__">
 						<span class="icon form-field-icon">
 							<svg>
 								<use xlink:href="img/icons/phone.svg#svg-phone"></use>
@@ -153,16 +154,16 @@
 		<div class="graph-modal__content">
 			<div class="quiz">
 				<h2 class="quiz__title">
-					Расчитай эффективность внедрения WFM-системы timebook
+					Расчитай эффективность <br> внедрения WFM-системы timebook
 				</h2>
 
-				<form class="quiz__form">
+				<form class="quiz__form js-form">
 					<div class="form-control quiz__form-control">
 						<h3 class="form-control__title">
 							Название организации
 						</h3>
 						<div class="form-field">
-							<input type="text" class="field" name="name" placeholder="Например,  Таймбук Сервис" required="">
+							<input type="text" class="field field-name" name="Название организации" placeholder="Например,  Таймбук Сервис">
 						</div>
 					</div>
 					<div class="form-control quiz__form-control">
@@ -172,7 +173,7 @@
 
 						<div class="range">
 							<div class="range-field">
-								<input type="range" class="range-input" min="0" max="3000" value="0">
+								<input type="range" class="range-input" name="Количество сотрудников" min="0" max="3000" value="0">
 								<span class="range-track"></span>
 								<div class="range-set">
 									<span class="range-current" data-postfix="чел">0</span>
@@ -192,17 +193,17 @@
 						<h3 class="form-control__title">
 							Сфера деятельности организации
 						</h3>
-						<select class="js-choices">
-							<option value="1">Ритейл</option>
-							<option value="2">Строительство</option>
-							<option value="3">Оказание услуг</option>
-							<option value="4">Кафе/рестораны</option>
-							<option value="5">Медицина</option>
-							<option value="6">Производство</option>
-							<option value="your-option">Иное(вписать руками)</option>
+						<select class="js-choices field-select" name="Сфера деятельности организации">
+							<option value="Ритейл">Ритейл</option>
+							<option value="Строительство">Строительство</option>
+							<option value="Оказание услуг">Оказание услуг</option>
+							<option value="Кафе/рестораны">Кафе/рестораны</option>
+							<option value="Медицина">Медицина</option>
+							<option value="Производство">Производство</option>
+							<option value="Иное(вписать руками)">Иное(вписать руками)</option>
 						</select>
-						<div class="js-choices-field form-field" style="display: none;">
-							<input type="text" class="field" placeholder="Иное (вписать руками)" required>
+						<div class="js-choices-field form-field">
+							<input type="text" class="field" name="other" placeholder="Иное (вписать руками)">
 						</div>
 					</div>
 					<div class="form-control quiz__form-control">
@@ -212,7 +213,7 @@
 
 						<div class="range">
 							<div class="range-field">
-								<input type="range" class="range-input" min="0" max="100" value="0">
+								<input type="range" class="range-input" name="Количество объектов учета" min="0" max="100" value="0">
 								<span class="range-track"></span>
 								<div class="range-set">
 									<span class="range-current">0</span>
@@ -270,14 +271,14 @@
           +7 909-28-28-578
         </a>
         <div class="footer__socials">
-          <a href="T.me/+79092828578" target="_blank" class="btn footer__socials-link">
+          <a href="https://t.me/+79092828578" target="_blank" class="btn footer__socials-link">
             <span class="icon">
               <svg>
                 <use xlink:href="img/icons/telegram.svg#svg-telegram"></use>
               </svg>
             </span>
           </a>
-          <a href="Wa.me/+79092828578" target="_blank" class="btn footer__socials-link">
+          <a href="https://wa.me/+79092828578" target="_blank" class="btn footer__socials-link">
             <span class="icon">
               <svg>
                 <use xlink:href="img/icons/whatsapp.svg#svg-whatsapp"></use>
@@ -301,7 +302,7 @@
         <p class="footer__text">
           *не является публичной офертой
         </p>
-        <a href="#" class="btn btn-inherit text-underline footer__text-link">
+        <a href="policy.pdf" rel="noopener noreferrer" target="_blank" class="btn btn-inherit text-underline footer__text-link">
           Политика конфиденциальности
         </a>
       </div>

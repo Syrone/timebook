@@ -16,37 +16,47 @@ export const validateForms = (selector, rules, afterSend) => {
 
   forms.forEach((form) => {
     const telSelector = form.querySelector('input[type="tel"]');
-  
+
     if (telSelector) {
       const inputMask = new Inputmask('+7 (999) 999-99-99');
       inputMask.mask(telSelector);
-  
-      for (let item of rules) {
-        if (item.tel) {
-          item.rules.push({
-            rule: 'function',
-            validator: function() {
-              const phone = telSelector.inputmask.unmaskedvalue();
-              return phone.length === 10;
-            },
-            errorMessage: item.telError
-          });
-        }
-      }
     }
 
+    const formRules = rules.map((item) => {
+      // Создаем копию объекта правил для каждой формы
+      const newItem = { ...item };
+      if (newItem.tel && telSelector) {
+        newItem.rules = [...newItem.rules, {
+          rule: 'function',
+          validator: function () {
+            const phone = telSelector.inputmask.unmaskedvalue();
+            return phone.length === 10;
+          },
+          errorMessage: 'Не верный телефон'
+        }];
+      }
+      return newItem;
+    });
+
     const validation = new JustValidate(form);
-  
-    for (let item of rules) {
-      validation
-        .addField(item.ruleSelector, item.rules);
-    }
-  
+
+    formRules.forEach((item) => {
+      const field = form.querySelector(item.ruleSelector);
+
+      if (field) {
+        const parentElement = field.closest('.form-control');
+
+        validation.addField(item.ruleSelector, item.rules, {
+          errorsContainer: parentElement,
+        });
+      }
+    });
+
     validation.onSuccess((ev) => {
       let formData = new FormData(ev.target);
-  
+
       let xhr = new XMLHttpRequest();
-  
+
       xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
@@ -54,16 +64,18 @@ export const validateForms = (selector, rules, afterSend) => {
               afterSend();
             }
             console.log('Отправлено');
+          } else {
+            console.error('Ошибка при отправке формы');
           }
         }
-      }
-  
-      xhr.open('POST', 'mail.php', true);
+      };
+
+      xhr.open('POST', 'mail.php', true); // Укажите правильный путь к mail.php
       xhr.send(formData);
-  
+
       ev.target.reset();
-    })
-  
+    });
+
     validation.onFail((fields) => {
       for (let field in fields) {
         if (!fields[field].isValid) {
