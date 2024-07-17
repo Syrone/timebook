@@ -3057,10 +3057,10 @@ p + p {
     padding-top: calc(0.8rem + (1 * var(--keg) - 0.8 * var(--keg)) * (100vw - 20rem) / 1600);
   }
   .resizable-swiper--md .swiper-wrapper {
-    grid-template-columns: repeat(auto-fill, minmax(calc(10rem + (22.5 * var(--keg) - 10 * var(--keg)) * (100vw - 20rem) / 1600), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(calc(11.25rem + (22.5 * var(--keg) - 11.25 * var(--keg)) * (100vw - 20rem) / 1600), 1fr));
   }
   .resizable-swiper--md .swiper-slide {
-    width: calc(18rem + (22.5 * var(--keg) - 18 * var(--keg)) * (100vw - 20rem) / 1600);
+    width: calc(11.25rem + (22.5 * var(--keg) - 11.25 * var(--keg)) * (100vw - 20rem) / 1600);
   }
   .swiper-navigation {
     gap: calc(5rem + (6.25 * var(--keg) - 5 * var(--keg)) * (100vw - 20rem) / 1600);
@@ -3161,7 +3161,7 @@ p + p {
     margin-top: calc(0.8rem + (1 * var(--keg) - 0.8 * var(--keg)) * (100vw - 20rem) / 1600);
   }
   .logo-description {
-    max-width: calc(17.6rem + (22 * var(--keg) - 17.6 * var(--keg)) * (100vw - 20rem) / 1600);
+    max-width: calc(11rem + (22 * var(--keg) - 11 * var(--keg)) * (100vw - 20rem) / 1600);
   }
   .header {
     padding-block: calc(1rem + (1.25 * var(--keg) - 1 * var(--keg)) * (100vw - 20rem) / 1600);
@@ -3194,6 +3194,8 @@ p + p {
   }
   .hero__features {
     max-width: calc(20rem + (75 * var(--keg) - 20 * var(--keg)) * (100vw - 20rem) / 1600);
+    -ms-grid-columns: (minmax(calc(7.5rem + (15 * var(--keg) - 7.5 * var(--keg)) * (100vw - 20rem) / 1600), calc(9.5rem + (19 * var(--keg) - 9.5 * var(--keg)) * (100vw - 20rem) / 1600)))[3];
+    grid-template-columns: repeat(3, minmax(calc(7.5rem + (15 * var(--keg) - 7.5 * var(--keg)) * (100vw - 20rem) / 1600), calc(9.5rem + (19 * var(--keg) - 9.5 * var(--keg)) * (100vw - 20rem) / 1600)));
     gap: calc(1.6rem + (2 * var(--keg) - 1.6 * var(--keg)) * (100vw - 20rem) / 1600);
     margin: calc(3rem + (3.75 * var(--keg) - 3 * var(--keg)) * (100vw - 20rem) / 1600) auto calc(4rem + (5 * var(--keg) - 4 * var(--keg)) * (100vw - 20rem) / 1600);
   }
@@ -3204,8 +3206,8 @@ p + p {
     --_i-size: calc(1.5rem + ((1.875 * var(--keg)) - (1.5 * var(--keg))) * ((100vw - 20rem) / (1920 - 320)));
   }
   .hero__footer {
-    -ms-grid-columns: (minmax(calc(16rem + (20 * var(--keg) - 16 * var(--keg)) * (100vw - 20rem) / 1600), calc(23rem + (28.75 * var(--keg) - 23 * var(--keg)) * (100vw - 20rem) / 1600)))[2];
-    grid-template-columns: repeat(2, minmax(calc(16rem + (20 * var(--keg) - 16 * var(--keg)) * (100vw - 20rem) / 1600), calc(23rem + (28.75 * var(--keg) - 23 * var(--keg)) * (100vw - 20rem) / 1600)));
+    -ms-grid-columns: (minmax(calc(10rem + (20 * var(--keg) - 10 * var(--keg)) * (100vw - 20rem) / 1600), calc(23rem + (28.75 * var(--keg) - 23 * var(--keg)) * (100vw - 20rem) / 1600)))[2];
+    grid-template-columns: repeat(2, minmax(calc(10rem + (20 * var(--keg) - 10 * var(--keg)) * (100vw - 20rem) / 1600), calc(23rem + (28.75 * var(--keg) - 23 * var(--keg)) * (100vw - 20rem) / 1600)));
     gap: calc(1.6rem + (2 * var(--keg) - 1.6 * var(--keg)) * (100vw - 20rem) / 1600);
   }
   .hero__btn {
@@ -3227,8 +3229,8 @@ p + p {
     padding: calc(3rem + (3.75 * var(--keg) - 3 * var(--keg)) * (100vw - 20rem) / 1600);
   }
   .risk__container {
-    -ms-grid-columns: minmax(calc(36rem + (45 * var(--keg) - 36 * var(--keg)) * (100vw - 20rem) / 1600), calc(46rem + (58 * var(--keg) - 46 * var(--keg)) * (100vw - 20rem) / 1600)) minmax(calc(17.6rem + (22 * var(--keg) - 17.6 * var(--keg)) * (100vw - 20rem) / 1600), calc(24rem + (30 * var(--keg) - 24 * var(--keg)) * (100vw - 20rem) / 1600));
-    grid-template-columns: minmax(calc(36rem + (45 * var(--keg) - 36 * var(--keg)) * (100vw - 20rem) / 1600), calc(46rem + (58 * var(--keg) - 46 * var(--keg)) * (100vw - 20rem) / 1600)) minmax(calc(17.6rem + (22 * var(--keg) - 17.6 * var(--keg)) * (100vw - 20rem) / 1600), calc(24rem + (30 * var(--keg) - 24 * var(--keg)) * (100vw - 20rem) / 1600));
+    -ms-grid-columns: minmax(calc(22.5rem + (45 * var(--keg) - 22.5 * var(--keg)) * (100vw - 20rem) / 1600), calc(29rem + (58 * var(--keg) - 29 * var(--keg)) * (100vw - 20rem) / 1600)) minmax(calc(11rem + (22 * var(--keg) - 11 * var(--keg)) * (100vw - 20rem) / 1600), calc(15rem + (30 * var(--keg) - 15 * var(--keg)) * (100vw - 20rem) / 1600));
+    grid-template-columns: minmax(calc(22.5rem + (45 * var(--keg) - 22.5 * var(--keg)) * (100vw - 20rem) / 1600), calc(29rem + (58 * var(--keg) - 29 * var(--keg)) * (100vw - 20rem) / 1600)) minmax(calc(11rem + (22 * var(--keg) - 11 * var(--keg)) * (100vw - 20rem) / 1600), calc(15rem + (30 * var(--keg) - 15 * var(--keg)) * (100vw - 20rem) / 1600));
     gap: calc(1.6rem + (2 * var(--keg) - 1.6 * var(--keg)) * (100vw - 20rem) / 1600);
   }
   .risk__list .swiper-wrapper {
@@ -3257,7 +3259,7 @@ p + p {
     padding: calc(6rem + (7.5 * var(--keg) - 6 * var(--keg)) * (100vw - 20rem) / 1600) 0;
   }
   .implemented__list .swiper-wrapper {
-    gap: calc(4rem + (5 * var(--keg) - 4 * var(--keg)) * (100vw - 20rem) / 1600) calc(8rem + (10 * var(--keg) - 8 * var(--keg)) * (100vw - 20rem) / 1600);
+    gap: calc(2.5rem + (5 * var(--keg) - 2.5 * var(--keg)) * (100vw - 20rem) / 1600) calc(8rem + (10 * var(--keg) - 8 * var(--keg)) * (100vw - 20rem) / 1600);
   }
   .implemented__list-item {
     gap: calc(1.5rem + (1.875 * var(--keg) - 1.5 * var(--keg)) * (100vw - 20rem) / 1600);
@@ -3279,8 +3281,8 @@ p + p {
     margin-bottom: calc(5rem + (6.25 * var(--keg) - 5 * var(--keg)) * (100vw - 20rem) / 1600);
   }
   .photofixing__item {
-    -ms-flex-preferred-size: calc(18rem + (22.5 * var(--keg) - 18 * var(--keg)) * (100vw - 20rem) / 1600);
-    flex-basis: calc(18rem + (22.5 * var(--keg) - 18 * var(--keg)) * (100vw - 20rem) / 1600);
+    -ms-flex-preferred-size: calc(11.25rem + (22.5 * var(--keg) - 11.25 * var(--keg)) * (100vw - 20rem) / 1600);
+    flex-basis: calc(11.25rem + (22.5 * var(--keg) - 11.25 * var(--keg)) * (100vw - 20rem) / 1600);
   }
   .photofixing__item-image {
     margin-bottom: calc(0.2rem + (0.25 * var(--keg) - 0.2 * var(--keg)) * (100vw - 20rem) / 1600);
@@ -3291,8 +3293,8 @@ p + p {
     gap: calc(2rem + (2.5 * var(--keg) - 2 * var(--keg)) * (100vw - 20rem) / 1600);
   }
   .bourse {
-    grid-template-columns: repeat(auto-fill, minmax(calc(18rem + (22.5 * var(--keg) - 18 * var(--keg)) * (100vw - 20rem) / 1600), 1fr));
-    gap: calc(1.5rem + (1.875 * var(--keg) - 1.5 * var(--keg)) * (100vw - 20rem) / 1600);
+    grid-template-columns: repeat(auto-fill, minmax(calc(11.25rem + (22.5 * var(--keg) - 11.25 * var(--keg)) * (100vw - 20rem) / 1600), 1fr));
+    gap: calc(0.9375rem + (1.875 * var(--keg) - 0.9375 * var(--keg)) * (100vw - 20rem) / 1600);
     margin-bottom: calc(4rem + (5 * var(--keg) - 4 * var(--keg)) * (100vw - 20rem) / 1600);
   }
   .bourse__item-image {
@@ -3321,9 +3323,9 @@ p + p {
     margin-bottom: calc(1.5rem + (1.875 * var(--keg) - 1.5 * var(--keg)) * (100vw - 20rem) / 1600);
   }
   .writing {
-    -ms-grid-columns: minmax(calc(28rem + (35 * var(--keg) - 28 * var(--keg)) * (100vw - 20rem) / 1600), calc(36rem + (45 * var(--keg) - 36 * var(--keg)) * (100vw - 20rem) / 1600)) minmax(calc(16rem + (20 * var(--keg) - 16 * var(--keg)) * (100vw - 20rem) / 1600), calc(28rem + (35 * var(--keg) - 28 * var(--keg)) * (100vw - 20rem) / 1600));
-    grid-template-columns: minmax(calc(28rem + (35 * var(--keg) - 28 * var(--keg)) * (100vw - 20rem) / 1600), calc(36rem + (45 * var(--keg) - 36 * var(--keg)) * (100vw - 20rem) / 1600)) minmax(calc(16rem + (20 * var(--keg) - 16 * var(--keg)) * (100vw - 20rem) / 1600), calc(28rem + (35 * var(--keg) - 28 * var(--keg)) * (100vw - 20rem) / 1600));
-    gap: calc(2rem + (2.5 * var(--keg) - 2 * var(--keg)) * (100vw - 20rem) / 1600) calc(1.5rem + (1.875 * var(--keg) - 1.5 * var(--keg)) * (100vw - 20rem) / 1600);
+    -ms-grid-columns: minmax(calc(16.5rem + (35 * var(--keg) - 16.5 * var(--keg)) * (100vw - 20rem) / 1600), calc(22.5rem + (45 * var(--keg) - 22.5 * var(--keg)) * (100vw - 20rem) / 1600)) minmax(calc(16rem + (20 * var(--keg) - 16 * var(--keg)) * (100vw - 20rem) / 1600), calc(28rem + (35 * var(--keg) - 28 * var(--keg)) * (100vw - 20rem) / 1600));
+    grid-template-columns: minmax(calc(16.5rem + (35 * var(--keg) - 16.5 * var(--keg)) * (100vw - 20rem) / 1600), calc(22.5rem + (45 * var(--keg) - 22.5 * var(--keg)) * (100vw - 20rem) / 1600)) minmax(calc(16rem + (20 * var(--keg) - 16 * var(--keg)) * (100vw - 20rem) / 1600), calc(28rem + (35 * var(--keg) - 28 * var(--keg)) * (100vw - 20rem) / 1600));
+    gap: calc(1.25rem + (2.5 * var(--keg) - 1.25 * var(--keg)) * (100vw - 20rem) / 1600) calc(1.5rem + (1.875 * var(--keg) - 1.5 * var(--keg)) * (100vw - 20rem) / 1600);
     margin-bottom: calc(3rem + (3.75 * var(--keg) - 3 * var(--keg)) * (100vw - 20rem) / 1600);
   }
   .writing__end {
