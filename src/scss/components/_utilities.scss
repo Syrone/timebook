@@ -6,6 +6,10 @@
 	font-family: var(--font-title) !important;
 }
 
+.font-third {
+	font-family: var(--font-third) !important;
+}
+
 .primary-color {
 	color: var(--primary-color) !important;
 }
@@ -38,34 +42,28 @@
 	display: inline-block;
 	color: var(--light-color);
 	background-color: var(--primary-color);
-	border-radius: var(--radius-3xl);
-	padding: 0 1.5rem;
+	border-radius: var(--radius-md);
+	padding: 0 .75rem;
 }
 
 .text-background-outline {
 	display: inline-block;
 	background-color: transparent;
 	border: 2px solid var(--primary-color);
-	border-radius: var(--radius-3xl);
-	padding: 0 1.5rem;
+	border-radius: var(--radius-md);
+	padding: 0 .75rem;
 }
 
 .text-background-light {
 	display: inline-block;
 	color: var(--primary-color);
 	background-color: var(--background);
-	border-radius: var(--radius-3xl);
-	padding: 0 1.5rem;
+	border-radius: var(--radius-md);
+	padding: 0 .75rem;
 }
 
-.fw-700 {
-	font-weight: 700 !important;
-}
-
-.fw-500 {
-	font-weight: 500 !important;
-}
-
-.fw-400 {
-	font-weight: 400 !important;
+.brand {
+	font-family: var(--font-third) !important;
+	font-size: .9375em !important;
+	text-transform: initial !important;
 }

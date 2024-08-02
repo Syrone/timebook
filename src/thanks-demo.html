@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+"title": "Timebook"
+})
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <h1 class="visually-hidden">Страница Спасибо</h1>
+      <div class="main-sections">
+        <section class="section thanks">
+          <div class="container-lg">
+            <div class="thanks__inner">
+              <div class="section-header section-header--center section-header--offset-md">
+                <h2 class="h1 section-title">
+                  Спасибо <br> за&nbsp;вашу заявку!
+                </h2>
+              </div>
+              <p class="section-text section-text--center">
+                Перезвоним в&nbsp;течение 10&nbsp;минут и&nbsp;согласуем дату и&nbsp;время бесплатной демонстрации
+                wfm-системы по&nbsp;номеру телефона:
+              </p>
+
+              <div class="thanks__bottom">
+                <div class="thanks__bottom-phone h6 js-current-phone">+7 (999) 999-99-99</div>
+                <button type="button" class="btn text-underline thanks__bottom-btn" data-graph-path="modal-demo">
+                  Изменить номер телефона
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section-header section-header--center">
+              <h2 class="h1 section-title">
+                А пока ждете <br> результаты расчета
+              </h2>
+            </div>
+            <p class="section-text section-text--center section-text--offset">
+              Посмотрите сравнительное видео по&nbsp;работе двух предприятий после внедрении wfm-системы и&nbsp;без нее
+            </p>
+            <div class="thanks__video">
+              <div class="js-video video-wrapper video-wrapper--4x3" data-scr-video="./videos/timebook.mp4"
+                style="background-image: url(./img/posters/picture-6.webp);">
+                <button type="button" class="btn video-play video-play-lg">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/video-play-light.svg#svg-video-play-light"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <script defer>
+        const phoneElements = document.querySelectorAll('.js-current-phone');
+        const storedPhoneNumber = localStorage.getItem('submittedPhoneNumber');
+        phoneElements?.forEach((element) => {
+          if (storedPhoneNumber) element.textContent = `+7 (${storedPhoneNumber.slice(0, 3)}) ${storedPhoneNumber.slice(3, 6)}-${storedPhoneNumber.slice(6, 8)}-${storedPhoneNumber.slice(8)}`;
+        })
+      </script>
+
+      @include('partials/modals.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

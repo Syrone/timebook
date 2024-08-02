@@ -1,8 +1,7 @@
 const range = document.querySelectorAll('.range');
 
 range?.forEach(el => {
-	const current = el.querySelector('.range-current'),
-				input = el.querySelector('.range-input'),
+	const input = el.querySelector('.range-input'),
 				control = el.querySelector('.range-control-field'),
 				track = el.querySelector('.range-track'),
 				setEl = el.querySelector('.range-set'),
@@ -18,8 +17,7 @@ range?.forEach(el => {
 					max = parseInt(input.max),
 					value = parseInt(input.value);
 
-		const postfix = current.dataset.postfix || '';
-		current.textContent = `${formatNumber(value)} ${postfix}`;
+		control.value = `${formatNumber(value)}`;
 		
 		const percent = ((value - min) / (max - min)) * 100;
 		const setElWidth = setEl.offsetWidth;

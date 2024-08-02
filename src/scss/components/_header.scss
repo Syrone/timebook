@@ -7,7 +7,7 @@
 	&__end {
 		display: flex;
 		align-items: center;
-		gap: 2rem;
+		gap: 1.5rem;
 	}
 
 	&__inner {
@@ -30,16 +30,18 @@
 		gap: .875rem;
 
 		&-whatsapp {
-			--_icon-size: 3rem;
+			--_icon-size: 2.25rem;
 		}
 
 		&-content {
+			--_color: var(--secondary-color);
+
 			display: flex;
 			flex-direction: column;
 			align-items: stretch;
 			gap: .25rem;
 			font-family: var(--font-title);
-			font-size: var(--fs-xl);
+			font-size: var(--fs-lg);
 			font-weight: 700;
 			line-height: var(--lh-1);
 
@@ -47,14 +49,18 @@
 				font-family: var(--font-family);
 				font-size: var(--fs-xxs);
 				font-weight: 400;
+				text-align: right;
 			}
 		}
 	}
 
 	&__callback {
-		min-height: 3.125rem;
+		min-height: 2.875rem;
+		font-family: var(--font-title);
 		font-size: var(--fs);
+		font-weight: 700;
+		text-transform: uppercase;
 		border-radius: var(--radius-sm);
-		padding: .5rem 2rem;
+		padding: .5rem 1rem;
 	}
 }

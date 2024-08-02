@@ -8,7 +8,7 @@
 			</span>
 		</button>
 		<div class="graph-modal__content">
-			<form class="graph-modal__form js-form">
+			<form class="graph-modal__form js-form js-form--demo">
 				<h2 class="h6 graph-modal__form-title">
 					Заказать бесплатную демонстрацию продукта
 				</h2>
@@ -46,7 +46,7 @@
 			</span>
 		</button>
 		<div class="graph-modal__content">
-			<form class="graph-modal__form js-form">
+			<form class="graph-modal__form js-form js-form--callback">
 				<h2 class="h6 graph-modal__form-title">
 					Перезвоните мне
 				</h2>
@@ -87,10 +87,10 @@
 		<div class="graph-modal__content">
 			<div class="quiz">
 				<h2 class="quiz__title">
-					Расчитай эффективность <br> внедрения WFM-системы timebook
+					Расчитай эффективность <br> внедрения WFM-системы <span class="brand">timebook</span>
 				</h2>
 
-				<form class="quiz__form js-form">
+				<form class="quiz__form js-form js-form--quiz">
 					<div class="form-control quiz__form-control">
 						<h3 class="form-control__title">
 							Название организации
@@ -105,20 +105,20 @@
 						</h3>
 
 						<div class="range">
+							<div class="range-control">
+								<input type="text" class="field range-control-field" placeholder="Введите кол-во">
+								<span class="range-control-prefix">чел</span>
+							</div>
 							<div class="range-field">
 								<input type="range" class="range-input" name="Количество сотрудников" min="0" max="3000" value="0">
 								<span class="range-track"></span>
 								<div class="range-set">
-									<span class="range-current" data-postfix="чел">0</span>
 									<button type="button" class="btn range-btn"></button>
 								</div>
 							</div>
 							<div class="range-value">
 								<span class="range-value-min"></span>
 								<span class="range-value-max"></span>
-							</div>
-							<div class="range-control">
-								<input type="text" class="field range-control-field" placeholder="Введите кол-во">
 							</div>
 						</div>
 					</div>
@@ -145,11 +145,13 @@
 						</h3>
 
 						<div class="range">
+							<div class="range-control">
+								<input type="text" class="field range-control-field" placeholder="Введите кол-во">
+							</div>
 							<div class="range-field">
 								<input type="range" class="range-input" name="Количество объектов учета" min="0" max="100" value="0">
 								<span class="range-track"></span>
 								<div class="range-set">
-									<span class="range-current">0</span>
 									<button type="button" class="btn range-btn"></button>
 								</div>
 							</div>
@@ -157,9 +159,20 @@
 								<span class="range-value-min"></span>
 								<span class="range-value-max"></span>
 							</div>
-							<div class="range-control">
-								<input type="text" class="field range-control-field" placeholder="Введите кол-во">
-							</div>
+						</div>
+					</div>
+					<div class="form-control quiz__form-control">
+						<h3 class="form-control__title">
+							Введите ваш контактный номер
+						</h3>
+
+						<div class="form-field form-field--phone">
+							<input type="tel" class="field field-tel" name="Телефон" placeholder="+7 (___) ___-__-__">
+							<span class="icon form-field-icon">
+								<svg>
+									<use xlink:href="img/icons/phone.svg#svg-phone"></use>
+								</svg>
+							</span>
 						</div>
 					</div>
 
@@ -175,3 +188,51 @@
 		</div>
 	</div>
 </div>
+
+<div class="cookie">
+	<div class="cookie-content">
+		<div class="cookie-content__body">
+			<h3 class="h7 cookie-content__title">
+				Мы используем файлы-Cookies
+			</h3>
+			<p class="cookie-content__text">
+				ООО "Таймбук" обрабатывает Cookies, чтобы пользоваться веб-сайтом было удобнее. Вы можете запретить обработку Cookie в настройках браузера. Пожалуйста, ознакомьтесь с <a href="policy.pdf" rel="noopener noreferrer" target="_blank" class="btn btn-inherit cookie-content__policy">политикой использования Cookies</a>
+			</p>
+		</div>
+
+		<div class="cookie-content__footer">
+			<button type="button" class="btn btn-sm btn-primary cookie-accept">
+				Принять
+			</button>
+			<button type="button" class="btn btn-sm btn-outline-primary cookie-decline">
+				Отклонить
+			</button>
+		</div>
+	</div>
+</div>
+<script defer>
+	const cookieNotification = document.querySelectorAll('.cookie');
+	
+	cookieNotification?.forEach((element) => {
+		const acceptButton = element.querySelector('.cookie-accept');
+		const declineButton = element.querySelector('.cookie-decline');
+
+		// Проверяем, согласился ли пользователь на использование куки
+		if (localStorage.getItem('cookiesAccepted') === 'true') {
+			element.style.display = 'none';
+		}
+		
+		acceptButton.addEventListener('click', () => {
+			// Сохраняем согласие в localStorage
+			localStorage.setItem('cookiesAccepted', 'true');
+			element.style.display = 'none';
+		});
+	
+		declineButton.addEventListener('click', () => {
+			// Убираем уведомление, но не сохраняем согласие
+			element.style.display = 'none';
+			window.location.href = 'https://ya.ru/';
+		});
+	})
+
+</script>

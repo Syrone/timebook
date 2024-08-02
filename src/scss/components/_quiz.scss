@@ -14,11 +14,13 @@
 		&-submit {
 			width: 100%;
 			padding: 1rem 1.25rem;
+			align-self: end;
 		}
 
 		&-hint {
 			font-size: var(--fs-xs);
-			margin-block: auto;
+			margin-block: -3.125rem 0;
+			grid-column: -1 / 1;
 		}
 	}
 }

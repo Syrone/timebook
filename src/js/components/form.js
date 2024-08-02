@@ -42,8 +42,16 @@ const rules = [
   },
 ];
 
-const afterForm = () => {
-  window.location.href = "thanks.html";
+const afterForm = (form) => {
+  if (form.classList.contains('js-form--callback')) {
+    window.location.href = "thanks-callback.html";
+  } else if (form.classList.contains('js-form--demo')) {
+    window.location.href = "thanks-demo.html";
+  } else if (form.classList.contains('js-form--quiz')) {
+    window.location.href = "thanks-quiz.html";
+  } else {
+    window.location.href = "thanks-callback.html";
+  }
 };
 
 validateForms('.js-form', rules, afterForm);

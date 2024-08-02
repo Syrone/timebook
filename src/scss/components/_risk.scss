@@ -2,18 +2,30 @@
 
 	&__container {
 		display: grid;
-		grid-template-columns: minmax(45rem, 58rem) minmax(22rem, 30rem);
+		grid-template-columns: repeat(2, minmax(25rem, 36.5rem));
+		justify-content: space-between;
 		gap: 2rem;
 		justify-content: space-between;
+	}
+
+	&__list {
+
+		.list-icon-content {
+			margin: 0;
+		}
 	}
 }
 
 @media (min-width: 75rem) {
 	.risk__list {
-
+		
 		.swiper-wrapper {
 			grid-template-columns: 1fr;
-			gap: 4.375rem;
+			gap: 3rem;
+		}
+	
+		.swiper-slide {
+			width: 100%;
 		}
 	}
 }

@@ -32,16 +32,18 @@ try {
   $mail->SMTPAuth   = true;
 
   // Настройки вашей почты
-  $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
-  $mail->Username   = 'Sintez.digital@yandex.ru'; // Логин на почте
-  $mail->Password   = 'ovvkfqjhkrszbrbj'; // Пароль на почте
+  $mail->Host       = 'smtp.timeweb.ru'; // SMTP сервера вашей почты
+  $mail->Username   = 'info@tb-service.ru'; // Логин на почте
+  $mail->Password   = 'Ozhigin91@'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('Sintez.digital@yandex.ru', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('info@tb-service.ru', 'Заявка с Timebook'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
-  $mail->addAddress('Sintez.digital@yandex.ru');
+  $mail->addAddress('al.a.morozov@ya.ru');
+  $mail->addAddress('morozovaa@lad24.ru');
+  $mail->addAddress('sintez.digital@ya.ru');
 
   // Прикрипление файлов к письму
   if (!empty($file['name'][0])) {

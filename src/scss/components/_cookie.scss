@@ -1,0 +1,39 @@
+.cookie {
+	max-width: 30rem;
+	position: fixed;
+	bottom: 0;
+	left: max(var(--container-offset), (100% - var(--content-width-lg)) / 2);
+	right: max(var(--container-offset), (100% - var(--content-width-lg)) / 2);
+	z-index: 10;
+
+	&-content {
+		font-size: var(--fs-sm);
+		background-color: var(--background);
+		border: 1px solid #eee;
+		border-radius: var(--radius-lg);
+		padding: 1.5rem;
+
+		&__title {
+			margin-bottom: .5rem;
+		}
+
+		&__policy {
+			--_color: var(--primary-color);
+			--_color-active: var(--secondary-color);
+			
+			display: inline;
+		}
+
+		&__footer {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1rem;
+			margin-top: 1.5rem;
+		}
+	}
+
+	&-accept,
+	&-decline {
+		flex: 1;
+	}
+}

@@ -1,3 +1,4 @@
+import './components/header.js';
 import './components/tabs.js';
 import './components/swipers.js';
 import './components/video.js';

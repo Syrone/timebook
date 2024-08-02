@@ -9,6 +9,14 @@
 			color: var(--_icon-color-active);
 		}
 	}
+
+	.btn-border-svg:hover {
+		.btn-border-svg-clipath {
+			&::before {
+				background-color: var(--primary-color);
+			}
+		}
+	}
 }
 
 .btn {
@@ -85,9 +93,39 @@
 	--_background-color-active: var(--secondary-color);
 
 	font-family: var(--font-title);
+	min-height: 2.875rem;
+	font-size: var(--fs-lg);
+	font-weight: 700;
+	border-radius: var(--radius-sm);
+	padding: .5rem 1rem;
+	position: relative;
+
+	&::after {
+		content: '';
+		display: block;
+		width: 20%;
+		height: 2px;
+		background-color: currentColor;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.btn-outline-primary {
+	--_color: var(--primary-color);
+	--_background-color: transparent;
+
+	--_color-active: var(--light-color);
+	--_background-color-active: var(--primary-color);
+	--_border-color-active: var(--primary-color);
+
+	font-family: var(--font-title);
 	min-height: 6.25rem;
 	font-size: var(--fs-lg);
 	font-weight: 700;
+	border: 1px solid var(--primary-color);
 	border-radius: var(--radius-3xl);
 	padding: 1rem 4rem;
 }
@@ -100,11 +138,24 @@
 	--_background-color-active: var(--secondary-color);
 
 	font-family: var(--font-title);
-	min-height: 6.25rem;
+	min-height: 2.875rem;
 	font-size: var(--fs-lg);
 	font-weight: 700;
-	border-radius: var(--radius-3xl);
-	padding: 1rem 4rem;
+	border-radius: var(--radius-sm);
+	padding: .5rem 1rem;
+	position: relative;
+
+	&::after {
+		content: '';
+		display: block;
+		width: 20%;
+		height: 2px;
+		background-color: currentColor;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 }
 
 .btn-light {
@@ -122,15 +173,76 @@
 	padding: 1rem 4rem;
 }
 
+.btn-border-svg {
+	--_color: var(--primary-color);
+	--_background-color: transparent;
+
+	--_color-active: var(--primary-color);
+	--_background-color-active: transparent;
+
+	position: relative;
+	z-index: 1;
+	pointer-events: none;
+
+	&::after {
+		content: '';
+		display: block;
+		width: 15%;
+		padding-top: 2px;
+		background-color: currentColor;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -1;
+	}
+
+	.btn-border-svg-clipath {
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+
+		&::after,
+		&::before {
+			content: '';
+			display: block;
+			border-radius: inherit;
+			clip-path: polygon( 4.222% 1.1%,96.042% 1.1%,96.042% 1.1%,96.684% 1.316%,97.293% 1.942%,97.861% 2.942%,98.38% 4.285%,98.841% 5.934%,99.236% 7.857%,99.558% 10.02%,99.798% 12.388%,99.948% 14.927%,100% 17.604%,100% 83.496%,100% 83.496%,99.948% 86.186%,99.796% 88.736%,99.554% 91.113%,99.23% 93.281%,98.831% 95.207%,98.366% 96.857%,97.844% 98.195%,97.272% 99.188%,96.66% 99.801%,96.014% 100%,63.549% 99.047%,63.549% 99.047%,63.409% 99.032%,63.27% 98.997%,63.132% 98.942%,62.994% 98.867%,62.857% 98.772%,62.721% 98.656%,62.585% 98.521%,62.451% 98.366%,62.318% 98.191%,62.187% 97.996%,57.274% 90.313%,57.274% 90.313%,57.122% 90.088%,56.968% 89.887%,56.813% 89.708%,56.657% 89.554%,56.499% 89.422%,56.341% 89.314%,56.181% 89.23%,56.021% 89.17%,55.86% 89.134%,55.699% 89.122%,50.132% 89.122%,44.301% 89.122%,44.301% 89.122%,44.14% 89.134%,43.979% 89.17%,43.819% 89.23%,43.659% 89.314%,43.501% 89.422%,43.343% 89.554%,43.187% 89.708%,43.032% 89.887%,42.878% 90.088%,42.726% 90.313%,37.813% 97.996%,37.813% 97.996%,37.681% 98.191%,37.549% 98.366%,37.415% 98.521%,37.279% 98.656%,37.143% 98.772%,37.006% 98.867%,36.868% 98.942%,36.73% 98.998%,36.591% 99.032%,36.451% 99.047%,4.25% 99.999%,4.25% 99.999%,3.604% 99.8%,2.992% 99.187%,2.42% 98.194%,1.898% 96.856%,1.433% 95.207%,1.034% 93.281%,0.71% 91.112%,0.467% 88.736%,0.316% 86.185%,0.264% 83.495%,0.264% 17.604%,0.264% 17.604%,0.316% 14.927%,0.466% 12.388%,0.706% 10.02%,1.027% 7.857%,1.423% 5.934%,1.884% 4.285%,2.403% 2.942%,2.971% 1.942%,3.58% 1.316%,4.222% 1.1% );
+			pointer-events: auto;
+			position: absolute;
+			inset: 0;
+		}
+
+		&::after {
+			background-color: var(--background);
+			inset: 1px;
+			z-index: -1;
+		}
+
+		&::before {
+			background-color: #d1d1d2;
+			z-index: -2;
+		}
+	}
+
+	&:is(:active, :focus-visible, .is-active) {
+		.btn-border-svg-clipath {
+			&::before {
+				background-color: var(--primary-color);
+			}
+		}
+	}
+}
+
 .btn-sm {
 	min-height: 1.5rem;
-	font-size: .875rem;
+	font-size: var(--fs-xs);
 }
 
 .btn-lg {
-	min-height: 7.5rem;
+	min-height: 4rem;
 	font-size: var(--fs-xl);
-	border-radius: 3.75rem;
-	padding: 1rem 5rem;
+  border-radius: .75rem;
+	padding: .5rem 2rem;
 	text-transform: uppercase;
 }

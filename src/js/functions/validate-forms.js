@@ -54,6 +54,11 @@ export const validateForms = (selector, rules, afterSend) => {
 
     validation.onSuccess((ev) => {
       let formData = new FormData(ev.target);
+      if (telSelector) {
+        let phoneNumber = telSelector.inputmask.unmaskedvalue();
+        localStorage.setItem('submittedPhoneNumber', phoneNumber);
+      } // Get the phone number
+
 
       let xhr = new XMLHttpRequest();
 
@@ -61,7 +66,7 @@ export const validateForms = (selector, rules, afterSend) => {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
             if (afterSend) {
-              afterSend();
+              afterSend(ev.target);
             }
             console.log('Отправлено');
           } else {

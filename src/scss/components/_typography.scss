@@ -50,8 +50,57 @@ p {
 	}
 }
 
+.fs-base {
+	font-size: var(--fs) !important;
+}
+
+.fs-xxs {
+	font-size: var(--fs-xxs) !important;
+}
+
+.fs-xs {
+	font-size: var(--fs-xs) !important;
+}
+
+.fs-sm {
+	font-size: var(--fs-sm) !important;
+}
+
+.fs-md {
+	font-size: var(--fs-md) !important;
+}
+
+.fs-lg {
+	font-size: var(--fs-lg) !important;
+}
+
+.fs-xl {
+	font-size: var(--fs-xl) !important;
+}
+
+.fs-xxl {
+	font-size: var(--fs-xxl) !important;
+}
+
+.fs-italic {
+	font-style: italic !important;
+}
+
+.fw-700 {
+	font-weight: 700 !important;
+}
+
+.fw-500 {
+	font-weight: 500 !important;
+}
+
+.fw-400 {
+	font-weight: 400 !important;
+}
+
 .text-underline {
 	text-decoration: underline !important;
+	text-underline-offset: 0.2em;
 }
 
 .text-initial {

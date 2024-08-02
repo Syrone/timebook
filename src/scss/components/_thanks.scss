@@ -1,0 +1,33 @@
+.thanks {
+
+	&__inner {
+		background-color: var(--background-light);
+		border-radius: var(--radius-3xl);
+		padding: 8.75rem var(--container-offset);
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: .125rem 4rem;
+		margin-top: 5rem;
+
+		&-phone {
+			margin: 0;
+		}
+
+		&-btn {
+			--_color: var(--primary-color);
+			--_color-active: var(--text-color);
+
+			font-size: var(--fs-lg);
+			line-height: 1;
+		}
+	}
+
+	&__video {
+		max-width: 46.875rem;
+		margin-inline: auto;
+	}
+}

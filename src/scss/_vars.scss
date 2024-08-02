@@ -2,20 +2,21 @@
   // base
   --font-family: "TT-Norms", sans-serif;
   --font-title: "RoadRadio", sans-serif;
-  --content-width: 95.625rem;
-  --content-width-lg: 112.5rem;
+  --font-third: "Roboto", sans-serif;
+  --content-width: 90rem;
+  --content-width-lg: 101.25rem;
   --container-offset: 1rem;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   --container-width-lg: calc(var(--content-width-lg) + (var(--container-offset) * 2));
   
   // font-size
-  --h1: 4.6875rem;
-  --h2: 4.375rem;
+  --h1: 3.75rem;
+  --h2: 3rem;
   --h3: 4rem;
   --h4: 3.75rem;
   --h5: 2.5rem;
-  --h6: 2.25rem;
-  --h7: 1.875rem;
+  --h6: 1.875rem;
+  --h7: 1.5rem;
 
   --fs: 1rem;
   --fs-xxs: .75rem;
@@ -53,10 +54,10 @@
   --background-dark: #28272e;
 
   // radius
-  --radius-sm: .625rem;
+  --radius-sm: .5rem;
   --radius: 1rem;
   --radius-md: 1.25rem;
-  --radius-lg: 1.875rem;
+  --radius-lg: 2rem;
   --radius-3xl: 3.125rem;
 
   // transition

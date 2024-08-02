@@ -8,14 +8,18 @@
 		gap: 1rem 2rem;
 		margin-bottom: 1rem;
 
+		.section-title {
+			margin-bottom: 0;
+		}
+
 		&--center {
-			max-width: 78rem;
+			max-width: 60rem;
 			margin-inline: auto;
 			justify-content: center;
 			text-align: center;
 
 			&-lg {
-				max-width: 88rem;
+				max-width: 66rem;
 			}
 
 			~ .section-text {
@@ -28,6 +32,10 @@
 
 			.section-title {
 				margin-bottom: 0;
+			}
+
+			&-md {
+				margin-bottom: 3.125rem;
 			}
 		}
 	}
@@ -68,7 +76,7 @@
 	}
 
 	&-text {
-		font-size: var(--fs-xxl);
+		font-size: var(--fs-xl);
 
 		+ .section-text {
 			margin-top: 2rem;
@@ -79,7 +87,7 @@
 		}
 
 		&--center {
-			max-width: 52rem;
+			max-width: 30rem;
 			margin-inline: auto;
 			text-align: center;
 			margin-bottom: 1rem;
@@ -100,10 +108,6 @@
 		display: flex;
 		justify-content: center;
 		margin-top: 3.125rem;
-
-		&__btn {
-			min-width: 30rem;
-		}
 	}
 
 	&:last-child {
@@ -132,6 +136,11 @@
 
 	&--inner {
 		background-image: url(../img/background-2.webp);
+		margin-top: -9.375rem;
+		padding-top: 9.375rem;
+	}
+
+	&--overflow {
 		margin-top: -9.375rem;
 		padding-top: 9.375rem;
 	}
