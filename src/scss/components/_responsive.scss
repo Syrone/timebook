@@ -487,9 +487,9 @@
 	.choices {
 
 		.choices__inner {
-			min-height: calc(3.125rem + ((6.25 * var(--keg)) - (3.125 * var(--keg))) * ((100vw - 20rem) / (1920 - 320)));
+			min-height: calc(3rem + ((4 * var(--keg)) - (3 * var(--keg))) * ((100vw - 20rem) / (1920 - 320)));
 			gap: calc(.2rem + ((.25 * var(--keg)) - (.2 * var(--keg))) * ((100vw - 20rem) / (1920 - 320)));
-			padding: calc(.4rem + ((.5 * var(--keg)) - (.4 * var(--keg))) * ((100vw - 20rem) / (1920 - 320))) calc(2rem + ((2.5 * var(--keg)) - (2 * var(--keg))) * ((100vw - 20rem) / (1920 - 320)));
+			padding: calc(.25rem + ((.5 * var(--keg)) - (.25 * var(--keg))) * ((100vw - 20rem) / (1920 - 320))) calc(.875rem + ((1.5 * var(--keg)) - (.875 * var(--keg))) * ((100vw - 20rem) / (1920 - 320)));
 		}
 
 		.choices__item {
