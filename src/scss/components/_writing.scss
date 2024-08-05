@@ -1,6 +1,7 @@
 .writing {
 	display: grid;
-	grid-template-columns: minmax(35rem, 45rem) minmax(20rem, 35rem);
+	grid-template-columns: repeat(2, minmax(20rem, 35rem));
+	align-items: center;
 	justify-content: space-between;
 	gap: 2.5rem 1.875rem;
 	margin-bottom: 3.75rem;

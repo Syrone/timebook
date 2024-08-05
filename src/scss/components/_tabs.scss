@@ -1,33 +1,34 @@
 .tabs {
 
+	&:not(.tabs--horizontal) {
+
+		.tabs-inner {
+			background-color: var(--background-light);
+			clip-path: polygon(11.5% 7.618%, 11.5% 7.618%, 11.675% 7.596%, 11.847% 7.531%, 12.015% 7.425%, 12.179% 7.278%, 12.337% 7.091%, 12.489% 6.866%, 12.634% 6.604%, 12.77% 6.306%, 12.898% 5.974%, 13.016% 5.608%, 14.05% 2.098%, 14.05% 2.098%, 14.168% 1.732%, 14.296% 1.399%, 14.432% 1.102%, 14.577% 0.84%, 14.729% 0.615%, 14.887% 0.428%, 15.051% 0.281%, 15.219% 0.174%, 15.391% 0.109%, 15.566% 0.088%, 98.025% 0.088%, 98.025% 0.088%, 98.345% 0.161%, 98.649% 0.373%, 98.932% 0.713%, 99.191% 1.169%, 99.421% 1.729%, 99.619% 2.382%, 99.779% 3.116%, 99.899% 3.92%, 99.974% 4.783%, 100% 5.692%, 100% 94.308%, 100% 94.308%, 99.974% 95.217%, 99.899% 96.08%, 99.779% 96.884%, 99.619% 97.618%, 99.421% 98.271%, 99.191% 98.831%, 98.932% 99.287%, 98.649% 99.627%, 98.345% 99.839%, 98.025% 99.912%, 63.007% 99.912%, 63.007% 99.912%, 62.894% 99.903%, 62.782% 99.876%, 62.671% 99.831%, 62.561% 99.767%, 62.452% 99.687%, 62.346% 99.589%, 62.241% 99.474%, 62.139% 99.342%, 62.039% 99.194%, 61.942% 99.029%, 59.829% 95.192%, 59.829% 95.192%, 59.733% 95.027%, 59.633% 94.879%, 59.531% 94.747%, 59.426% 94.632%, 59.319% 94.534%, 59.211% 94.453%, 59.101% 94.39%, 58.99% 94.345%, 58.878% 94.317%, 58.765% 94.308%, 50.083% 94.308%, 41.402% 94.308%, 41.402% 94.308%, 41.289% 94.317%, 41.177% 94.345%, 41.066% 94.39%, 40.956% 94.453%, 40.847% 94.534%, 40.741% 94.632%, 40.636% 94.747%, 40.534% 94.879%, 40.434% 95.027%, 40.337% 95.192%, 38.224% 99.029%, 38.224% 99.029%, 38.128% 99.194%, 38.028% 99.342%, 37.926% 99.474%, 37.821% 99.589%, 37.714% 99.687%, 37.606% 99.767%, 37.496% 99.831%, 37.385% 99.876%, 37.273% 99.903%, 37.16% 99.912%, 2.132% 99.912%, 2.132% 99.912%, 1.812% 99.84%, 1.509% 99.629%, 1.227% 99.291%, 0.968% 98.838%, 0.738% 98.281%, 0.541% 97.632%, 0.38% 96.901%, 0.26% 96.101%, 0.184% 95.242%, 0.156% 94.337%, 0.01% 13.251%, 0.01% 13.251%, 0.035% 12.339%, 0.108% 11.472%, 0.227% 10.665%, 0.388% 9.926%, 0.585% 9.27%, 0.816% 8.706%, 1.075% 8.248%, 1.359% 7.906%, 1.664% 7.692%, 1.985% 7.618%, 11.5% 7.618%);
+		}
+	}
+
 	&__nav {
 		width: 100%;
 		display: flex;
 		justify-content: center;
-		gap: .625rem;
-		margin-bottom: 1.25rem;
+		gap: 1.5rem;
+		margin-bottom: 3.75rem;
 		white-space: nowrap;
 		overflow-y: hidden;
 		overflow-x: auto;
-
-		&-btn {
-			min-height: 5rem;
-			font-family: var(--font-title);
-			text-transform: uppercase;
-			padding: .5rem 3.125rem;
-		}
 	}
 
 	&__inner {
-		display: grid;
-		grid-template-columns: minmax(22rem, 28.75rem) minmax(36rem, 1fr);
-		gap: 2.5rem;
 		background-color: var(--background-light);
 		border-radius: var(--radius-3xl);
-		padding: 4.375rem 6.25rem;
+		padding: 5rem 0;
 
-		&-start {
-			padding-top: 1.875rem;
+		.container {
+			display: grid;
+			grid-template-columns: minmax(22rem, 28.75rem) minmax(36rem, 50rem);
+			justify-content: space-between;
+			gap: 2.5rem;
 		}
 
 		&-title {
@@ -37,7 +38,7 @@
 		&-end {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
-			gap: 1.875rem;
+			gap: 2.5rem;
 
 			&_image {
 				display: block;
@@ -54,23 +55,23 @@
 		&-example,
 		&-image {
 			background-color: var(--background);
-			border-radius: var(--radius-lg);
+			border-radius: var(--radius-md);
 		}
 
 		&-example {
-			padding: 3.125rem 2.5rem;
+			padding: 1.5rem 2rem;
 
 			&_title {
 				width: max-content;
 				display: flex;
 				align-items: center;
-				gap: .5rem;
-				font-size: var(--fs-xs);
+				gap: .375rem;
+				font-size: var(--fs-xxs);
 				line-height: normal;
 				color: var(--light-color);
 				background-color: var(--primary-color);
 				margin-bottom: 1rem;
-				border-radius: var(--radius);
+				border-radius: var(--radius-sm);
 				padding: .5rem .75rem;
 
 				.icon {
@@ -80,9 +81,15 @@
 			}
 
 			&_subtitle {
-				max-width: 12rem;
+				display: flex;
+				justify-content: space-between;
 				font-size: var(--fs);
 				margin-bottom: 2.5rem;
+
+				> * {
+					display: flex;
+					flex-direction: column;
+				}
 			}
 
 			&_table {
@@ -105,14 +112,17 @@
 				}
 
 				th {
-					font-weight: 500;
+					font-weight: 700;
 					text-align: left;
+				}
+
+				td {
+					padding-bottom: .5rem;
 				}
 			}
 		}
 
 		&-image {
-			min-height: 20rem;
 			width: 100%;
 			height: 100%;
 			display: block;
@@ -135,10 +145,16 @@
 			overflow: visible;
 
 			&-btn {
+				--_background-color: var(--background-gray);
+
 				width: 100%;
 				min-height: 6.875rem;
 				border-radius: var(--radius-md);
 			}
+		}
+
+		.tabs__content {
+			height: 100%;
 		}
 
 		.tabs__panel,
@@ -147,8 +163,11 @@
 		}
 
 		.tabs__inner {
+			display: grid;
 			grid-template-columns: 1fr;
 			gap: 3.125rem;
+			background-color: var(--background-gray);
+			padding: 4.5rem 6.25rem;
 			position: relative;
 
 			&-item {
@@ -174,6 +193,7 @@
 				width: 100%;
 				height: 100%;
 				position: absolute;
+				inset: 0;
 				pointer-events: none;
 			}
 

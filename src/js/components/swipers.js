@@ -1,5 +1,5 @@
-import Swiper, { Pagination, Navigation } from 'swiper';
-Swiper.use([Pagination, Navigation]);
+import Swiper, { Pagination, Navigation, Mousewheel, FreeMode } from 'swiper';
+Swiper.use([Pagination, Navigation, Mousewheel, FreeMode]);
 
 const resizableSwiper = (breakpoint, swiperClass, swiperConfig, callback) => {
 	let swiper
@@ -27,6 +27,7 @@ const resizableSwiper = (breakpoint, swiperClass, swiperConfig, callback) => {
 
 const heroSwipers = document.querySelectorAll('.hero-swiper'),
 	resizableSwipers = document.querySelectorAll('.resizable-swiper'),
+	verticalSwipers = document.querySelectorAll('.vertical-swiper'),
 	lawSwipers = document.querySelectorAll('.law-swiper'),
 	personnelSwipers = document.querySelectorAll('.personnel-swiper')
 
@@ -102,6 +103,39 @@ resizableSwipers?.forEach((el) => {
 			}
 		}
 	)
+})
+
+verticalSwipers?.forEach((el) => {
+	const pagination = el.querySelector('.swiper-pagination')
+
+	new Swiper(el, {
+		direction: 'vertical',
+		watchSlidesProgress: true,
+		slidesPerView: 1,
+		pagination: {
+			el: pagination,
+			clickable: true,
+		},
+		mousewheel: {
+			enabled: true,
+			releaseOnEdges: true,
+			eventsTarget: '.mousewheel'
+		},
+		breakpoints: {
+			0: {
+				spaceBetween: 20
+			},
+			576: {
+				spaceBetween: 20
+			},
+			992: {
+				spaceBetween: 24
+			},
+			1400: {
+				spaceBetween: 30
+			}
+		}
+	});
 })
 
 lawSwipers?.forEach((el) => {

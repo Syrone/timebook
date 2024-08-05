@@ -1,10 +1,11 @@
 .contract {
 	display: grid;
-	grid-template-columns: minmax(30rem, 56.25rem) minmax(30rem, 42.5rem);
+	grid-template-columns: minmax(30rem, 60rem) minmax(30rem, 40rem);
 	align-items: center;
 	gap: 1.875rem;
 
 	&__end {
+		margin-right: -4rem;
 		position: relative;
 	}
 

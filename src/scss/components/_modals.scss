@@ -9,11 +9,12 @@
 		background-image: initial;
 		top: 1.875rem;
 		right: 2.5rem;
+		z-index: 2;
 	}
 	
 	&__container {
 		width: calc(100% - var(--container-offset) * 2);
-		max-width: 75rem;
+		max-width: 82rem;
 		border: 1px solid rgba($color: #00325E, $alpha: .1);
 		border-radius: var(--radius-3xl);
 		margin-block: 3.125rem;
@@ -29,6 +30,12 @@
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
+		}
+
+		&--video {
+			background-color: transparent;
+			border: 0;
+			padding: 0;
 		}
 	}
 

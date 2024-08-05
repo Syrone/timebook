@@ -1,12 +1,6 @@
 .js-video {
 	width: 100%;
 	height: 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	border-radius: var(--radius-lg);
-	position: relative;
-	cursor: pointer;
 
 	&.is-active {
 
@@ -19,6 +13,12 @@
 .video-wrapper {
 	width: 100%;
 	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: var(--radius-lg);
+	position: relative;
+	cursor: pointer;
 	aspect-ratio: 16 / 8;
 
 	&--4x3 {

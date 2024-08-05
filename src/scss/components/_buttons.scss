@@ -166,11 +166,24 @@
 	--_background-color-active: var(--primary-color);
 
 	font-family: var(--font-title);
-	min-height: 6.25rem;
+	min-height: 2.875rem;
 	font-size: var(--fs-lg);
 	font-weight: 700;
-	border-radius: var(--radius-3xl);
-	padding: 1rem 4rem;
+	border-radius: var(--radius-sm);
+	padding: .5rem 1rem;
+	position: relative;
+
+	&::after {
+		content: '';
+		display: block;
+		width: 20%;
+		height: 2px;
+		background-color: currentColor;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 }
 
 .btn-border-svg {

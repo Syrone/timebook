@@ -1,24 +1,30 @@
 .result {
 
-	.swiper-slide {
-		width: 100%;
+	&:not(.result-vertical) {
+
+		.swiper-slide {
 		
-		&:nth-child(odd) {
-			.result__item {
-				color: var(--light-color);
-
-				&-clipath {
-
-					&::after {
-						background: var(--primary-color) radial-gradient(40% 40% at 90% 10%, rgba(255, 255, 255, .5) 0%, rgb(133, 187, 21) 100%);
-					}
-
-					&::before {
-						background-color: var(--background-dark);
+			&:nth-child(odd) {
+				.result__item {
+					color: var(--light-color);
+	
+					&-clipath {
+	
+						&::after {
+							background: var(--primary-color) radial-gradient(40% 40% at 90% 10%, rgba(255, 255, 255, .5) 0%, rgb(133, 187, 21) 100%);
+						}
+	
+						&::before {
+							background-color: var(--background-dark);
+						}
 					}
 				}
 			}
 		}
+	}
+
+	.swiper-slide {
+		width: 100%;
 	}
 
 	&__item {
@@ -74,40 +80,28 @@
 			margin-bottom: 1.25rem;
 		}
 	}
-}
 
-.result-sm {
-	grid-template-columns: repeat(4, 1fr);
+	&-vertical {
+		max-height: 20rem;
 
-	.result__item {
-		min-height: 25rem;
+		.swiper-slide {
+			width: 100%;
+			
+			&:nth-child(even) {
+				.result__item {
+					color: var(--light-color);
 
-		&-title {
-			font-size: var(--fs-xl);
-			margin-bottom: 1rem;
-		}
+					&-clipath {
 
-		&-text {
-			font-size: var(--fs);
-		}
-	}
+						&::after {
+							background: var(--primary-color) radial-gradient(40% 40% at 90% 10%, rgba(255, 255, 255, .5) 0%, rgb(133, 187, 21) 100%);
+						}
 
-	.swiper-slide {
-
-		&:nth-child(odd) {
-			.result__item {
-				color: initial;
-				background: var(--background-light);
-			}
-		}
-		
-		&:nth-child(8n + 2),
-		&:nth-child(8n + 4),
-		&:nth-child(8n + 5),
-		&:nth-child(8n + 7) {
-			.result__item {
-				color: var(--light-color);
-				background: var(--primary-color) radial-gradient(40% 40% at 90% 10%, rgba(255, 255, 255, .5) 0%, rgb(133, 187, 21) 100%);
+						&::before {
+							background-color: var(--background-dark);
+						}
+					}
+				}
 			}
 		}
 	}
@@ -116,8 +110,19 @@
 @media (min-width: 75rem) {
 	.result {
 
-		.swiper-wrapper {
-			gap: 4rem 3rem;
+		&:not(.result-vertical) {
+			.swiper-wrapper {
+				gap: 4rem 3rem;
+			}
+		}
+
+		&-vertical {
+			max-width: 33.75rem;
+			margin-inline: auto;
+		
+			.result__item {
+				padding: 2rem 4rem;
+			}
 		}
 	}
 }

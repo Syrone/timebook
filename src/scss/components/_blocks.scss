@@ -1,0 +1,9 @@
+.double-block {
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+	align-items: start;
+
+	.swiper {
+		width: 100%;
+	}
+}

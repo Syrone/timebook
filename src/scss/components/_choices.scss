@@ -19,15 +19,15 @@ $choices-bg-color-dropdown: var(--background);
   }
 
 	.#{$choices-selector}__inner {
-		min-height: 6.25rem;
+		min-height: 4rem;
 		display: flex;
 		align-items: center;
 		gap: .25rem;
 		background-color: var(--background);
 		font-size: inherit;
 		border: 1px solid rgba($color: #00325E, $alpha: .1);
-		border-radius: var(--radius-3xl);
-		padding: 0.5rem 2.5rem;
+		border-radius: .75rem;
+		padding: 0.5rem 1.25rem;
 		z-index: 1010;
 	}
 
@@ -67,7 +67,7 @@ $choices-bg-color-dropdown: var(--background);
 		}
 
 		.#{$choices-selector}__inner {
-			padding: 0.5rem 2.5rem;
+			padding: 0.5rem 1.25rem;
 		}
 	}
 }
@@ -77,8 +77,8 @@ $choices-bg-color-dropdown: var(--background);
   margin-top: 1rem;
 	word-break: unset;
 	border: 1px solid rgba($color: #00325E, $alpha: .1);
-	border-radius: var(--radius-3xl);
-	padding: 1rem 2.5rem;
+	border-radius: .75rem;
+	padding: 1rem 1.25rem;
 	z-index: 1010;
 
 	.#{$choices-selector}__list {

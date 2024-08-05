@@ -1,27 +1,35 @@
 .footer {
-	padding-block: 2rem;
+	padding-block: 2rem 1rem;
 
 	&__inner {
 		display: grid;
-		grid-template-columns: 20rem auto auto auto;
+		grid-template-columns: 9.25rem auto auto;
 		gap: 4rem;
 	}
 
 	&__top {
 		padding-bottom: 2rem;
 	}
+	
+	&__call {
+		display: flex;
+		justify-content: flex-end;
+		gap: 2rem;
+	}
 
 	&__bottom {
-		border-top: 1px solid #DEDEDE;
-		padding-top: 2rem;
+		font-size: var(--fs-xxs);
+		border-top: 1px solid var(--primary-color);
+		padding-top: 1rem;
 
 		.footer__inner {
-			grid-template-columns: 20rem auto auto auto;
+			grid-template-columns: 20rem auto auto;
 			align-items: center;
 		}
 	}
 
 	&__details {
+		font-size: var(--fs-xxs);
 		line-height: var(--lh-5);
 	}
 
@@ -39,7 +47,7 @@
 		gap: .625rem;
 
 		&-link {
-			--_icon-size: 3rem;
+			--_icon-size: 2.25rem;
 		}
 	}
 

@@ -4,7 +4,7 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	gap: 1.875rem;
-	margin-bottom: 6.25rem;
+	padding-bottom: 6.25rem;
 
 	&__item {
 		flex-basis: 22.5rem;
@@ -20,7 +20,7 @@
 
 		&-title {
 			font-family: var(--font-family);
-			font-size: var(--fs-xl);
+			font-size: var(--fs-lg);
 			font-weight: 400;
 			margin-bottom: 0;
 		}

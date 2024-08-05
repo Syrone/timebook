@@ -15,29 +15,30 @@
 }
 
 .field {
-	--_field-fs: var(--fs-lg);
-	--_field-fw: 400;
+	--_field-fs: var(--fs-xl);
+	--_field-fw: 700;
 	--_field-lh: var(--lh-1);
 	--_field-color: var(--text-color);
-	--_field-bg: var(--background);
+	--_field-bg: transparent;
 	--_field-duration: var(--transition-duration);
 	--_field-type: var(--transition-type);
 
 	--_field-p-fs: var(--_field-fs);
 	--_field-p-fw: var(--_field-fw);
 	--_field-p-lh: var(--_field-lh);
-	--_field-p-color: rgba(40, 39, 46, .5);
+	--_field-p-color: #c4c4c7;
 
 	width: 100%;
-	height: 6.25rem;
+	height: 4rem;
+	font-family: var(--font-title);
 	font-size: var(--_field-fs);
 	font-weight: var(--_field-fw);
 	line-height: var(--_field-lh);
 	color: var(--_field-color);
 	background-color: var(--_field-bg);
 	border: 1px solid rgba($color: #00325E, $alpha: .1);
-	border-radius: var(--radius-3xl);
-	padding: .5rem 2.5rem;
+	border-radius: .75rem;
+	padding: .5rem 1.25rem;
 	outline: none;
 	transition-property: color, background, border;
 	transition-duration: var(--_field-duration);
@@ -80,6 +81,19 @@
 		.form-field-icon {
 			pointer-events: none;
 		}
+	}
+
+	&::after {
+		content: '';
+		display: block;
+		width: 25%;
+		height: 1px;
+		background-color: var(--primary-color);
+		pointer-events: none;
+		position: absolute;
+		bottom: 1px;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 }
 

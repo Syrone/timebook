@@ -1,21 +1,22 @@
 .range {
 	width: 100%;
-	min-height: 6.25rem;
+	min-height: 3.75rem;
+	font-size: var(--fs-xs);
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
 
 	&-field {
 		width: 100%;
-		height: .625rem;
+		height: .25rem;
 		background-color: var(--background-light);
 		position: relative;
 		z-index: 1;
 	}
 
 	&-set {
-		width: 1.5rem;
-		height: 1.5rem;
+		width: 1.25rem;
+		height: 1.25rem;
 		position: absolute;
 		top: 50%;
 		left: 0;
@@ -25,13 +26,13 @@
 
 	&-current {
 		display: block;
-		font-size: var(--fs-lg);
+		font-size: var(--fs);
 		color: var(--primary-color);
 		text-align: center;
 		white-space: nowrap;
 		position: absolute;
 		left: 50%;
-		bottom: calc(100% + .625rem);
+		bottom: calc(100% + .25rem);
 		transform: translateX(-50%);
 	}
 
@@ -57,8 +58,8 @@
 		&[type="range"] {
 			&::-webkit-slider-thumb {
 				appearance: none;
-				width: 1.5rem;
-				height: 1.5rem;
+				width: 1.25rem;
+				height: 1.25rem;
 				background: none;
 				background-color: transparent;
 				border: none;
@@ -71,8 +72,8 @@
 
 			&::-moz-range-thumb {
 				-moz-appearance: none;
-				width: 1.5rem;
-				height: 1.5rem;
+				width: 1.25rem;
+				height: 1.25rem;
 				background: none;
 				background-color: transparent;
 				border: none;
@@ -103,7 +104,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin-top: .75rem;
+		margin-top: .625rem;
 	}
 
 	&-control {
@@ -111,24 +112,25 @@
 		align-items: center;
 		justify-content: center;
 		gap: .5rem;
-		font-size: var(--fs-lg);
+		font-size: var(--fs-xs);
 		color: var(--primary-color);
 		margin-bottom: .875rem;
 		position: relative;
 
 		&-field {
+			--_field-fs: var(--fs);
 			--_field-color: var(--primary-color);
 
-			max-width: 8.75rem;
-			height: 2.25rem;
+			max-width: 7rem;
+			height: 1.5rem;
 			display: block;
-			padding-block: 0;
+			padding: 0 1.5rem;
 			text-align: center;
 		}
 
 		&-prefix {
 			position: absolute;
-			left: calc(50% + 6rem);
+			left: calc(50% + 4.875rem);
 			transform: translateX(-50%);
 		}
 	}
