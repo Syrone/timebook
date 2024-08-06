@@ -738,7 +738,7 @@
 			}
 
 			&-item {
-				gap: calc(1.5rem + ((1.875 * var(--keg)) - (1.5 * var(--keg))) * ((100vw - 20rem) / (1920 - 320)));
+				gap: calc(.625rem + ((1.25 * var(--keg)) - (.625 * var(--keg))) * ((100vw - 20rem) / (1920 - 320)));
 			}
 
 			&-image {
@@ -1022,7 +1022,7 @@
 	// tasks
 	.tasks {
 		gap: calc(1.5rem + ((1.875 * var(--keg)) - (1.5 * var(--keg))) * ((100vw - 20rem) / (1920 - 320)));
-		margin-bottom: calc(2.5rem + ((4 * var(--keg)) - (2.5 * var(--keg))) * ((100vw - 20rem) / (1920 - 320)));
+		margin-top: calc(2.5rem + ((4 * var(--keg)) - (2.5 * var(--keg))) * ((100vw - 20rem) / (1920 - 320)));
 
 		&__item {
 			gap: calc(5rem + ((6.25 * var(--keg)) - (5 * var(--keg))) * ((100vw - 20rem) / (1920 - 320)));
@@ -1244,23 +1244,6 @@
 	.btn-sm {
 		min-height: 2.5rem;
 		padding: .25rem 1.25rem;
-	}
-
-	.btn-xl {
-		min-height: 5rem;
-	}
-
-	// field 
-	.field {
-		height: 5rem;
-	}
-
-	// choices
-	.choices {
-
-		.choices__inner {
-			min-height: 5rem;
-		}
 	}
 
 	// list
@@ -1702,7 +1685,7 @@
 	.tasks {
 		grid-template-columns: repeat(2, 1fr);
 		gap: 1.5rem;
-		margin-bottom: 1.5rem;
+		margin-top: 1.5rem;
 	}
 
 	// quiz
@@ -2005,12 +1988,7 @@
 
 	.btn-lg {
 		font-size: var(--fs-xs);
-		min-height: 2.5rem;
-	}
-
-	.btn-xl {
-		font-size: var(--fs-sm);
-		min-height: 3rem;
+		min-height: 3.125rem;
 	}
 
 	// field
@@ -2020,7 +1998,7 @@
 
 	.field {
 		--_field-fs: var(--fs);
-		height: 3rem;
+		height: 3.125rem;
 	}
 
 	.form-field-icon {
@@ -2224,7 +2202,7 @@
 		font-size: var(--fs);
 
 		.choices__inner {
-			min-height: 3rem;
+			min-height: 3.125rem;
 		}
 
 		.choices__item {
@@ -2347,7 +2325,7 @@
 		}
 
 		&__btn {
-			max-width: 18rem;
+			max-width: 14rem;
 		}
 
 		&__hint {
@@ -2735,7 +2713,7 @@
 	// tasks
 	.tasks {
 		gap: 0.625rem;
-		margin-bottom: 0.625rem;
+		margin-top: 0.625rem;
 
 		&__item {
 			flex-direction: column;

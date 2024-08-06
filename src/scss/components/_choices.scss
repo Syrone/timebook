@@ -19,7 +19,7 @@ $choices-bg-color-dropdown: var(--background);
   }
 
 	.#{$choices-selector}__inner {
-		min-height: 7.5rem;
+		min-height: 4rem;
 		display: flex;
 		align-items: center;
 		gap: .25rem;
