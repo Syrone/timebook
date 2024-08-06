@@ -2,8 +2,11 @@
 	display: grid;
 	grid-template-columns: repeat(2, 50%);
 	align-items: start;
+	position: relative;
 
-	.swiper {
-		width: 100%;
+	.section-header {
+		margin: 0;
+		position: sticky;
+		top: 1.5rem;
 	}
 }

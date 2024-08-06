@@ -39,7 +39,6 @@ a {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
 }
 
 .main {

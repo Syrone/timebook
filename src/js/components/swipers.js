@@ -107,35 +107,41 @@ resizableSwipers?.forEach((el) => {
 
 verticalSwipers?.forEach((el) => {
 	const pagination = el.querySelector('.swiper-pagination')
-
-	new Swiper(el, {
-		direction: 'vertical',
-		watchSlidesProgress: true,
-		slidesPerView: 1,
-		pagination: {
-			el: pagination,
-			clickable: true,
-		},
-		mousewheel: {
-			enabled: true,
-			releaseOnEdges: true,
-			eventsTarget: '.mousewheel'
-		},
-		breakpoints: {
-			0: {
-				spaceBetween: 20
+	resizableSwiper(
+		'(max-width: 36rem)',
+		el,
+		{
+			watchSlidesProgress: true,
+			slidesPerView: 'auto',
+			spaceBetween: 40,
+			pagination: {
+				el: pagination,
+				clickable: true,
 			},
-			576: {
-				spaceBetween: 20
-			},
-			992: {
-				spaceBetween: 24
-			},
-			1400: {
-				spaceBetween: 30
+			breakpoints: {
+				0: {
+					slidesPerView: 'auto',
+					spaceBetween: 10
+				},
+				576: {
+					slidesPerView: 'auto',
+					spaceBetween: 10
+				},
+				768: {
+					slidesPerView: 'auto',
+					spaceBetween: 10
+				},
+				992: {
+					slidesPerView: 'auto',
+					spaceBetween: 24
+				},
+				1200: {
+					slidesPerView: 'auto',
+					spaceBetween: 32
+				},
 			}
 		}
-	});
+	)
 })
 
 lawSwipers?.forEach((el) => {
